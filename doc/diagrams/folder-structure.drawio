@@ -1,0 +1,193 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.0.4 Chrome/138.0.7204.97 Electron/37.2.1 Safari/537.36" version="28.0.4">
+  <diagram name="Page-1" id="RI052Ass6KsZAgoyUiPx">
+    <mxGraphModel dx="920" dy="574" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="jASODgR0XXV5XVLS1rNU-54" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="87" y="80" width="343" height="475" as="geometry" />
+        </mxCell>
+        <mxCell id="jASODgR0XXV5XVLS1rNU-2" value="&lt;font face=&quot;Fira Code&quot;&gt;&lt;b&gt;Project&lt;/b&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="jASODgR0XXV5XVLS1rNU-54">
+          <mxGeometry x="33" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="jASODgR0XXV5XVLS1rNU-3" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#CCCCCC;" edge="1" parent="jASODgR0XXV5XVLS1rNU-54">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="13" y="460" as="sourcePoint" />
+            <mxPoint x="13" y="30" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jASODgR0XXV5XVLS1rNU-5" value="" style="sketch=0;aspect=fixed;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;fillColor=#808080;shape=mxgraph.mscae.enterprise.folder" vertex="1" parent="jASODgR0XXV5XVLS1rNU-54">
+          <mxGeometry x="33" y="40" width="23.26" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="jASODgR0XXV5XVLS1rNU-6" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#CCCCCC;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="jASODgR0XXV5XVLS1rNU-54" target="jASODgR0XXV5XVLS1rNU-5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="13" y="50" as="sourcePoint" />
+            <mxPoint x="13" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jASODgR0XXV5XVLS1rNU-7" value="&lt;font face=&quot;Fira Code&quot;&gt;documentation&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="jASODgR0XXV5XVLS1rNU-54">
+          <mxGeometry x="63" y="35" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="jASODgR0XXV5XVLS1rNU-8" value="" style="sketch=0;aspect=fixed;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;fillColor=#3399FF;shape=mxgraph.mscae.enterprise.folder" vertex="1" parent="jASODgR0XXV5XVLS1rNU-54">
+          <mxGeometry x="33" y="80" width="23.26" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="jASODgR0XXV5XVLS1rNU-10" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#CCCCCC;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="jASODgR0XXV5XVLS1rNU-54" target="jASODgR0XXV5XVLS1rNU-8">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="13" y="90" as="sourcePoint" />
+            <mxPoint x="33" y="70" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jASODgR0XXV5XVLS1rNU-11" value="&lt;font face=&quot;Fira Code&quot;&gt;frontend &lt;font style=&quot;color: rgb(51, 153, 255);&quot;&gt;(Next.JS app)&lt;/font&gt;&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="jASODgR0XXV5XVLS1rNU-54">
+          <mxGeometry x="63" y="75" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="jASODgR0XXV5XVLS1rNU-12" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#CCCCCC;curved=1;" edge="1" parent="jASODgR0XXV5XVLS1rNU-54">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="43" y="160" as="sourcePoint" />
+            <mxPoint x="43.44" y="105" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jASODgR0XXV5XVLS1rNU-15" value="" style="sketch=0;aspect=fixed;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;fillColor=#3399FF;shape=mxgraph.mscae.enterprise.folder" vertex="1" parent="jASODgR0XXV5XVLS1rNU-54">
+          <mxGeometry x="63" y="120" width="23.26" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="jASODgR0XXV5XVLS1rNU-16" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#CCCCCC;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="jASODgR0XXV5XVLS1rNU-54" target="jASODgR0XXV5XVLS1rNU-15">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="43" y="130" as="sourcePoint" />
+            <mxPoint x="73" y="110" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jASODgR0XXV5XVLS1rNU-17" value="&lt;font face=&quot;Fira Code&quot;&gt;app&amp;nbsp;&lt;font style=&quot;color: rgb(51, 153, 255);&quot;&gt;(UI)&lt;/font&gt;&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="jASODgR0XXV5XVLS1rNU-54">
+          <mxGeometry x="93" y="115" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="jASODgR0XXV5XVLS1rNU-18" value="" style="sketch=0;aspect=fixed;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;fillColor=#3399FF;shape=mxgraph.mscae.enterprise.folder" vertex="1" parent="jASODgR0XXV5XVLS1rNU-54">
+          <mxGeometry x="63" y="150" width="23.26" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="jASODgR0XXV5XVLS1rNU-19" value="&lt;font face=&quot;Fira Code&quot;&gt;actions&amp;nbsp;&lt;font style=&quot;color: rgb(51, 153, 255);&quot;&gt;(API Gateway)&lt;/font&gt;&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="jASODgR0XXV5XVLS1rNU-54">
+          <mxGeometry x="93" y="145" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="jASODgR0XXV5XVLS1rNU-20" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#CCCCCC;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="jASODgR0XXV5XVLS1rNU-54" target="jASODgR0XXV5XVLS1rNU-18">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="43" y="160" as="sourcePoint" />
+            <mxPoint x="73" y="130" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jASODgR0XXV5XVLS1rNU-21" value="" style="sketch=0;aspect=fixed;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;fillColor=#FF0000;shape=mxgraph.mscae.enterprise.folder" vertex="1" parent="jASODgR0XXV5XVLS1rNU-54">
+          <mxGeometry x="33" y="190" width="23.26" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="jASODgR0XXV5XVLS1rNU-22" value="&lt;font face=&quot;Fira Code&quot;&gt;services&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="jASODgR0XXV5XVLS1rNU-54">
+          <mxGeometry x="63" y="185" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="jASODgR0XXV5XVLS1rNU-23" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#CCCCCC;curved=1;" edge="1" parent="jASODgR0XXV5XVLS1rNU-54">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="43" y="390" as="sourcePoint" />
+            <mxPoint x="43.44" y="215" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jASODgR0XXV5XVLS1rNU-24" value="" style="sketch=0;aspect=fixed;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;fillColor=#FF0000;shape=mxgraph.mscae.enterprise.folder" vertex="1" parent="jASODgR0XXV5XVLS1rNU-54">
+          <mxGeometry x="63" y="230" width="23.26" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="jASODgR0XXV5XVLS1rNU-25" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#CCCCCC;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="jASODgR0XXV5XVLS1rNU-54" target="jASODgR0XXV5XVLS1rNU-24">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="43" y="240" as="sourcePoint" />
+            <mxPoint x="73" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jASODgR0XXV5XVLS1rNU-26" value="&lt;font face=&quot;Fira Code&quot;&gt;auth&amp;nbsp;&lt;font style=&quot;color: rgb(255, 0, 0);&quot;&gt;(Nest.JS app)&lt;/font&gt;&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="jASODgR0XXV5XVLS1rNU-54">
+          <mxGeometry x="93" y="225" width="210" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="jASODgR0XXV5XVLS1rNU-27" value="" style="sketch=0;aspect=fixed;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;fillColor=#FF0000;shape=mxgraph.mscae.enterprise.folder" vertex="1" parent="jASODgR0XXV5XVLS1rNU-54">
+          <mxGeometry x="63" y="260" width="23.26" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="jASODgR0XXV5XVLS1rNU-28" value="&lt;font face=&quot;Fira Code&quot;&gt;users&amp;nbsp;&lt;font style=&quot;color: rgb(255, 0, 0);&quot;&gt;(Nest.JS app)&lt;/font&gt;&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="jASODgR0XXV5XVLS1rNU-54">
+          <mxGeometry x="93" y="255" width="250" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="jASODgR0XXV5XVLS1rNU-29" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#CCCCCC;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="jASODgR0XXV5XVLS1rNU-54" target="jASODgR0XXV5XVLS1rNU-27">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="43" y="270" as="sourcePoint" />
+            <mxPoint x="73" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jASODgR0XXV5XVLS1rNU-30" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#CCCCCC;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="jASODgR0XXV5XVLS1rNU-54" target="jASODgR0XXV5XVLS1rNU-21">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="13" y="200" as="sourcePoint" />
+            <mxPoint x="33" y="185" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jASODgR0XXV5XVLS1rNU-31" value="" style="sketch=0;aspect=fixed;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;fillColor=#FF0000;shape=mxgraph.mscae.enterprise.folder" vertex="1" parent="jASODgR0XXV5XVLS1rNU-54">
+          <mxGeometry x="63" y="290" width="23.26" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="jASODgR0XXV5XVLS1rNU-32" value="&lt;font face=&quot;Fira Code&quot;&gt;appointments&amp;nbsp;&lt;font style=&quot;color: rgb(255, 0, 0);&quot;&gt;(Nest.JS app)&lt;/font&gt;&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="jASODgR0XXV5XVLS1rNU-54">
+          <mxGeometry x="93" y="285" width="210" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="jASODgR0XXV5XVLS1rNU-33" value="" style="sketch=0;aspect=fixed;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;fillColor=#FF0000;shape=mxgraph.mscae.enterprise.folder" vertex="1" parent="jASODgR0XXV5XVLS1rNU-54">
+          <mxGeometry x="63" y="320" width="23.26" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="jASODgR0XXV5XVLS1rNU-34" value="&lt;font face=&quot;Fira Code&quot;&gt;prescriptions&amp;nbsp;&lt;font style=&quot;color: rgb(255, 0, 0);&quot;&gt;(Nest.JS app)&lt;/font&gt;&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="jASODgR0XXV5XVLS1rNU-54">
+          <mxGeometry x="93" y="315" width="250" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="jASODgR0XXV5XVLS1rNU-35" value="" style="sketch=0;aspect=fixed;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;fillColor=#FF0000;shape=mxgraph.mscae.enterprise.folder" vertex="1" parent="jASODgR0XXV5XVLS1rNU-54">
+          <mxGeometry x="63" y="350" width="23.26" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="jASODgR0XXV5XVLS1rNU-36" value="&lt;font face=&quot;Fira Code&quot;&gt;records&amp;nbsp;&lt;font style=&quot;color: rgb(255, 0, 0);&quot;&gt;(Nest.JS app)&lt;/font&gt;&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="jASODgR0XXV5XVLS1rNU-54">
+          <mxGeometry x="93" y="345" width="210" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="jASODgR0XXV5XVLS1rNU-37" value="" style="sketch=0;aspect=fixed;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;fillColor=#FF0000;shape=mxgraph.mscae.enterprise.folder" vertex="1" parent="jASODgR0XXV5XVLS1rNU-54">
+          <mxGeometry x="63" y="380" width="23.26" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="jASODgR0XXV5XVLS1rNU-38" value="&lt;font face=&quot;Fira Code&quot;&gt;notifications&amp;nbsp;&lt;font style=&quot;color: rgb(255, 0, 0);&quot;&gt;(Nest.JS app)&lt;/font&gt;&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="jASODgR0XXV5XVLS1rNU-54">
+          <mxGeometry x="93" y="375" width="250" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="jASODgR0XXV5XVLS1rNU-39" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#CCCCCC;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="jASODgR0XXV5XVLS1rNU-54">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="43" y="299.89" as="sourcePoint" />
+            <mxPoint x="63" y="299.89" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jASODgR0XXV5XVLS1rNU-40" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#CCCCCC;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="jASODgR0XXV5XVLS1rNU-54">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="43" y="329.89" as="sourcePoint" />
+            <mxPoint x="63" y="329.89" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jASODgR0XXV5XVLS1rNU-41" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#CCCCCC;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="jASODgR0XXV5XVLS1rNU-54">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="43" y="359.89" as="sourcePoint" />
+            <mxPoint x="63" y="359.89" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jASODgR0XXV5XVLS1rNU-42" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#CCCCCC;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="jASODgR0XXV5XVLS1rNU-54">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="43" y="389.89" as="sourcePoint" />
+            <mxPoint x="63" y="389.89" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jASODgR0XXV5XVLS1rNU-44" value="&lt;font face=&quot;Fira Code&quot;&gt;README.md&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="jASODgR0XXV5XVLS1rNU-54">
+          <mxGeometry x="56.26000000000002" y="415" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="jASODgR0XXV5XVLS1rNU-46" value="&lt;font face=&quot;Fira Code&quot;&gt;LICENCE&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="jASODgR0XXV5XVLS1rNU-54">
+          <mxGeometry x="56.25999999999999" y="445" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="jASODgR0XXV5XVLS1rNU-48" value="" style="sketch=0;aspect=fixed;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;fillColor=#808080;shape=mxgraph.azure.code_file" vertex="1" parent="jASODgR0XXV5XVLS1rNU-54">
+          <mxGeometry x="33" y="450" width="18.8" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="jASODgR0XXV5XVLS1rNU-49" value="" style="sketch=0;aspect=fixed;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;fillColor=#808080;shape=mxgraph.azure.file" vertex="1" parent="jASODgR0XXV5XVLS1rNU-54">
+          <mxGeometry x="33" y="420" width="18.8" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="jASODgR0XXV5XVLS1rNU-50" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#CCCCCC;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="jASODgR0XXV5XVLS1rNU-54">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="13" y="429.77" as="sourcePoint" />
+            <mxPoint x="33" y="429.77" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jASODgR0XXV5XVLS1rNU-51" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#CCCCCC;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="jASODgR0XXV5XVLS1rNU-54">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="13" y="459.77" as="sourcePoint" />
+            <mxPoint x="33" y="459.77" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jASODgR0XXV5XVLS1rNU-53" value="" style="sketch=0;aspect=fixed;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;fillColor=light-dark(#CCCCCC,#BFD3FF);shape=mxgraph.mscae.enterprise.shared_folder" vertex="1" parent="jASODgR0XXV5XVLS1rNU-54">
+          <mxGeometry width="25.8" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
