@@ -1,2 +1,2 @@
-# sa-ass
+# Microservice app: 
 Software Architecture Course Project
