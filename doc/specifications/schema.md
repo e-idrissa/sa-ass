@@ -63,7 +63,7 @@ This file defines each database table schema of the app.
 - `drugId : string`
 - `frequency : String`
 
-### Drug Table
+### Drugs Table
 - `id : String`
 - `name : String`
 
@@ -71,5 +71,6 @@ This file defines each database table schema of the app.
 
 ### Records Table
 - `id: String`
+- `name: String`
 - `url: String`
 - `type: String`

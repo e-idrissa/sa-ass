@@ -4,7 +4,7 @@ This is a microservices app build with [Next.JS](https://nextjs.org/) that handl
 
 ## How it works
 
-On the first lunch of the app, a set of drugs are automatically populated in their table to enhance the UX.
+On the first lunch of the app, a set of drugs and and an admin user are automatically populated in their respective tables to enhance the UX.
 
 The admin create app users (patients and doctors) and manage the entire app. 
 
@@ -12,9 +12,9 @@ Patients can add some importants documents to their account and share them with 
 
 When the doctor accepts a appointment, the user is notified and the appointment status changes in the system. Doctors can create a dedicated prescriptions to a specific patient.
 
-## How it runs
+## How to run
 
-Build on a microservice architecture style, run the following commands in the terminal after you download the project and navigate to its location in the terminal
+Build on a microservice architecture style, run the following commands in the terminal after you download the project and navigate to its location in the terminal.
 
 ### Frontend
 
@@ -37,11 +37,20 @@ Here is a list of the services of the app:
 - records
 - notifications
 
-For each on of them, run the following:
+For each on of them, before going any further, consider to create a `.env` and populate it with `.env.example` file content and update it.
+
+⚠️ Don't change the services port values.
+
+Now, run the following for each service:
 ```bash
 cd [service-name]
 npm install
 npm start:dev
 ```
+
+
+**Admin Credentials:**
+- `email: admin@econsult.com`
+- `password: 1234@Admin`
 
 🥳 Amazing job so far. Now the app is fully running on your machine. Enjoy it!

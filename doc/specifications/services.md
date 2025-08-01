@@ -21,7 +21,7 @@ The frontend and API Gateway is built using [NextJS](https://nextjs.org/).
 - [TypeScript](https://www.typescriptlang.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Shadcn UI](https://ui.shadcn.com/)
-- [Prisma](https://www.prisma.io/)
+- [Axios](https://www.axios.io/)
 - [React Hook Form](https://react-hook-form.com/)
 
 ## 🏗️ Telemed services
