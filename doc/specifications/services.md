@@ -15,7 +15,7 @@ The frontend and API Gateway is built using [NextJS](https://nextjs.org/).
 2. Redirects requests to the right services (authentication, consultations, medical records, notifications).
 3. Can integrate mechanisms for validation, logging, security (`cookies()`)
 
-## Technologies
+### Technologies
 - [NextJS](https://nextjs.org/) with Server Actions
 - [React](https://reactjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
@@ -60,7 +60,7 @@ Handles registration, login, password reset, identity verification and provides 
 
 ---
 
-### 🧑‍🤝‍🧑 Appointments Service
+### 🗓️ Appointments Service
 
 - **Port** : `3003`
 - **URL** : `http://localhost:3003`
@@ -69,7 +69,7 @@ Handles registration, login, password reset, identity verification and provides 
 
 **Endpoints:** `POST /create` • `PUT /appointments/:id/update` • `GET /appointments` • `GET /appointments/:id` • `GET /appointments/:userId` • `DELETE /appointments/:id`
 
-**Technologies:** [NestJS](https://docs.nestjs.com/) • [PostgreSQL](https://www.postgresql.org/) (appointments-db) • [Prisma](https://www.prisma.io/) • [TypeScript](https://www.typescriptlang.org/)
+**Technologies:** [NestJS](https://docs.nestjs.com/) • [PostgreSQL](https://www.postgresql.org/) (appointments-db) • [Prisma](https://www.prisma.io/) • [TypeScript](https://www.typescriptlang.org/) • [Axios](https://www.axios.io/)
 
 ---
 
@@ -82,7 +82,7 @@ Handles registration, login, password reset, identity verification and provides 
 
 **Endpoints:** `POST /create` • `PUT /prescriptions/:id/update` • `GET /prescriptions` • `GET /prescriptions/:id` • `GET /prescriptions/:userId` • `DELETE /prescriptions/:id`
 
-**Technologies:** [NestJS](https://docs.nestjs.com/) • [PostgreSQL](https://www.postgresql.org/) (prescriptions-db) • [Prisma](https://www.prisma.io/) • [TypeScript](https://www.typescriptlang.org/)
+**Technologies:** [NestJS](https://docs.nestjs.com/) • [PostgreSQL](https://www.postgresql.org/) (prescriptions-db) • [Prisma](https://www.prisma.io/) • [TypeScript](https://www.typescriptlang.org/) • [Axios](https://www.axios.io/)
 
 ---
 
@@ -99,7 +99,7 @@ Handles registration, login, password reset, identity verification and provides 
 
 ---
 
-### 🗓️ Notifications Service
+### 🔔 Notifications Service
 
 - **Port** : `3006`
 - **URL** : `http://localhost:3006`
@@ -107,13 +107,8 @@ Handles registration, login, password reset, identity verification and provides 
 **Role:** Handles email or SMS notifications for appointment reminders, prescriptions, etc.
 
 **Endpoints:** `POST /notify`
-- `PUT /records/:id/update`
-- `GET /records`
-- `GET /records/:id`
-- `GET /records/:userId`
-- `DELETE /records/:id`
 
-**Technologies:** [NestJS](https://docs.nestjs.com/) • [PostgreSQL](https://www.postgresql.org/) (records-db) • [Prisma](https://www.prisma.io/) • [TypeScript](https://www.typescriptlang.org/)
+**Technologies:** [NestJS](https://docs.nestjs.com/) • [Nodemailer](https://www.nedemailer.org/)
 
 
 ## 🔗 Service Communication: REST
