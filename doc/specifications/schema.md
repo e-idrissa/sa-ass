@@ -2,7 +2,7 @@
 
 This file defines each database table schema of the app.
 
-## Users Service Schemas
+## 🧑🏻‍⚕️Users Service Schemas
 
 ### Patients Table
 - `id : String`
@@ -13,7 +13,7 @@ This file defines each database table schema of the app.
 - `firstName : String`
 - `lastName : String`
 - `dateOfBirth : Date`
-- `sex: String,` 
+- `sex: String` 
 - `telephone : String`
 - `emergencyContact : String`
 - `height : String`
