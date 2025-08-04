@@ -1,7 +1,4 @@
-import {
-  Card,
-  CardContent,
-} from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { AuthHeader } from "@/components/shared/auth-header";
 import { KeyRoundIcon } from "lucide-react";
 import { EmailForm } from "./_components/email-form";

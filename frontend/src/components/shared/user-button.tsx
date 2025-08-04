@@ -19,7 +19,7 @@ const UserButton = ({ user }: Props) => {
       >
         <DropdownMenuItem>
           <div className="flex items-center gap-2">
-            <UserRoundIcon className="size-10 border border-accent bg-accent rounded-full p-2 " />
+            <UserRoundIcon className="size-10 bg-blue-600/20  text-blue-600 rounded-full p-2 " />
             <div>
               <h4 className="font-semibold line-clamp-1">
                 {user.firstName} {user.lastName}

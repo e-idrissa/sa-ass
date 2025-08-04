@@ -1,7 +1,4 @@
-import {
-  Card,
-  CardContent,
-} from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { AuthHeader } from "@/components/shared/auth-header";
 import { KeyRoundIcon } from "lucide-react";
 import Link from "next/link";
@@ -17,7 +14,14 @@ export default function ResetPasswordPage() {
         </CardContent>
       </Card>
       <div className="text-muted-foreground text-sm">
-        By clicking, you agree with our <Link href={"#"} className="underline">Terms</Link> and <Link href={"#"} className="underline">Privacy Policy</Link>
+        By clicking, you agree with our{" "}
+        <Link href={"#"} className="underline">
+          Terms
+        </Link>{" "}
+        and{" "}
+        <Link href={"#"} className="underline">
+          Privacy Policy
+        </Link>
       </div>
     </div>
   );
