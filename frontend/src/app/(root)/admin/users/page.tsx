@@ -24,7 +24,9 @@ const Home = () => {
   const confirmedDoctors = doctors.filter((user) => user.isConfirmed === true);
   const patients = usersTableData.filter((user) => user.role === "patient");
   const pendingPatients = patients.filter((user) => user.isConfirmed === false);
-  const confirmedPatients = patients.filter((user) => user.isConfirmed === true);
+  const confirmedPatients = patients.filter(
+    (user) => user.isConfirmed === true
+  );
 
   return (
     <div className="flex flex-col gap-8">
@@ -42,9 +44,6 @@ const Home = () => {
           </TabsList>
           <TabsContent value="doctors">
             <Card className="bg-transparent">
-              <CardHeader>
-                <CardTitle className="text-xl text-semibold">Doctors</CardTitle>
-              </CardHeader>
               <CardContent className="">
                 <div className="flex gap-8">
                   <DataTable columns={columns} data={doctors} />
@@ -55,8 +54,14 @@ const Home = () => {
                       </CardTitle>
                       <div className="grid grid-cols-3 gap-4">
                         <StatCard count={doctors.length} label="total" />
-                        <StatCard count={pendingDoctors.length} label="pending" />
-                        <StatCard count={confirmedDoctors.length} label="confirmed" />
+                        <StatCard
+                          count={pendingDoctors.length}
+                          label="pending"
+                        />
+                        <StatCard
+                          count={confirmedDoctors.length}
+                          label="confirmed"
+                        />
                       </div>
                     </div>
                     <NewUserForm role="doctor" />
@@ -67,11 +72,6 @@ const Home = () => {
           </TabsContent>
           <TabsContent value="patients">
             <Card className="bg-transparent">
-              <CardHeader>
-                <CardTitle className="text-xl text-semibold">
-                  Patients
-                </CardTitle>
-              </CardHeader>
               <CardContent className="">
                 <div className="flex gap-8">
                   <DataTable columns={columns} data={patients} />
@@ -82,8 +82,14 @@ const Home = () => {
                       </CardTitle>
                       <div className="grid grid-cols-3 gap-4">
                         <StatCard count={patients.length} label="total" />
-                        <StatCard count={pendingPatients.length} label="pending" />
-                        <StatCard count={confirmedPatients.length} label="confirmed" />
+                        <StatCard
+                          count={pendingPatients.length}
+                          label="pending"
+                        />
+                        <StatCard
+                          count={confirmedPatients.length}
+                          label="confirmed"
+                        />
                       </div>
                     </div>
                     <NewUserForm role="patient" />

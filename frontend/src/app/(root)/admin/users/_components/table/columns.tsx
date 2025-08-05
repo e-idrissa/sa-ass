@@ -2,20 +2,12 @@
 
 import { TableBadge } from "@/components/shared/table-badge";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 import { ColumnDef } from "@tanstack/react-table";
-import { ScanBarcodeIcon, MoreHorizontal } from "lucide-react";
+import { ScanBarcodeIcon } from "lucide-react";
 import { UserDetails } from "../user-details";
 import { sampleUser } from "@/lib/tmp/user";
-import { useState } from "react";
+import { DeleteConfirmation } from "../delete-confimation";
+import { EditUserForm } from "../edit-user-form";
 
 export const columns: ColumnDef<IUsersTableData>[] = [
   {
@@ -88,30 +80,12 @@ export const columns: ColumnDef<IUsersTableData>[] = [
     header: () => <div className="w-12" />,
     cell: ({ row }) => {
       const user = sampleUser;
-      // eslint-disable-next-line react-hooks/rules-of-hooks
-      const [isSheetOpen, setSheetOpen] = useState(false);
 
       return (
         <div className="flex items-center">
-          <UserDetails
-            user={user}
-            isOpen={isSheetOpen}
-            setOpen={setSheetOpen}
-          />
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button variant="ghost" className="h-8 w-8 p-0">
-                <span className="sr-only">Open menu</span>
-                <MoreHorizontal className="h-4 w-4" />
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="end">
-              <DropdownMenuLabel>Actions</DropdownMenuLabel>
-              <DropdownMenuSeparator />
-              <DropdownMenuItem>Edit</DropdownMenuItem>
-              <DropdownMenuItem variant="destructive">Delete</DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
+          <UserDetails user={user} />
+          <EditUserForm user={user} />
+          <DeleteConfirmation id={row.original.id} />
         </div>
       );
     },

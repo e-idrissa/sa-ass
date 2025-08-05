@@ -46,6 +46,7 @@ This file defines each database table schema of the app.
 - `patientId: String`
 - `doctorId: String`
 - `reason: String`
+- `date: Date`
 - `status: String`
 - `createdAt: String`
 - `updatedAt: String`

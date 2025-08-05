@@ -3,7 +3,7 @@
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
-import { Loader2 } from "lucide-react";
+import { CircleCheckIcon, CircleXIcon, Loader2 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -17,6 +17,7 @@ import {
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 
 interface Props {
   role: string;
@@ -26,13 +27,13 @@ const FormSchema = z.object({
   email: z.string().min(2, {
     message: "Email must be at least 2 characters.",
   }),
-  firstName: z.string().min(8, {
+  firstName: z.string().min(3, {
     message: "First name must be at least 3 characters.",
   }),
-  lastName: z.string().min(8, {
+  lastName: z.string().min(3, {
     message: "Last name must be at least 3 characters.",
   }),
-  role: z.string().min(8, {
+  role: z.string().min(3, {
     message: "Role must be at least 3 characters.",
   }),
 });
@@ -54,6 +55,8 @@ export const NewUserForm = ({ role }: Props) => {
     console.log("NEW USER FORM VALUES", values);
   };
 
+  const res: string = ""
+
   return (
     <Card>
       <CardHeader>
@@ -61,6 +64,19 @@ export const NewUserForm = ({ role }: Props) => {
         <CardDescription>Lorem ipsum dolor sit amet, consectetur adipisicing</CardDescription>
       </CardHeader>
       <CardContent>
+        {res === "" ? null : res === "success" ? (
+          <Alert variant="success" className="mb-4">
+            <CircleCheckIcon className="size-4" />
+            <AlertTitle>Success</AlertTitle>
+            <AlertDescription>User created successfully</AlertDescription>
+          </Alert>
+        ) : (
+          <Alert variant="error" className="mb-4">
+            <CircleXIcon className="size-4" />
+            <AlertTitle>Error</AlertTitle>
+            <AlertDescription>Failed to create user</AlertDescription>
+          </Alert>
+        )}
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
             <FormField

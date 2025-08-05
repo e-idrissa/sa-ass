@@ -11,17 +11,17 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet"
-import { InfoIcon } from "lucide-react";
+import { PenIcon } from "lucide-react";
 
 interface Props {
   user: IUserInfos;
 }
 
-export function UserDetails({ user }: Props) {
+export function EditUserForm({ user }: Props) {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <Button variant="ghost"><InfoIcon className="size-4" /></Button>
+        <Button variant="ghost"><PenIcon className="size-4" /></Button>
       </SheetTrigger>
       <SheetContent>
         <SheetHeader>
