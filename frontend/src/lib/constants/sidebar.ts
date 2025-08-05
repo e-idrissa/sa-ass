@@ -3,7 +3,7 @@ import {
   Calendar,
   CalendarCogIcon,
   ChartPieIcon,
-  FileSpreadsheetIcon,
+  ClipboardListIcon,
   FolderIcon,
   HomeIcon,
   InfoIcon,
@@ -13,7 +13,7 @@ import {
 export const links = [
   { label: "Home", href: "/", icon: HomeIcon },
   { label: "Appointments", href: "/appointments", icon: Calendar },
-  { label: "Prescriptions", href: "/prescriptions", icon: FileSpreadsheetIcon },
+  { label: "Prescriptions", href: "/prescriptions", icon: ClipboardListIcon },
   { label: "Records", href: "/records", icon: FolderIcon },
 ];
 

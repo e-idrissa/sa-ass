@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils";
 import React from "react";
 
 interface Props {
-  variant: "pending" | "confirmed" | "completed" | "rejected";
+  variant: string
 }
 
 export const TableBadge = ({ variant }: Props) => {
@@ -18,7 +18,7 @@ export const TableBadge = ({ variant }: Props) => {
       : "bg-gray-500";
 
   return (
-    <div className="flex items-center gap-2 px-3 py-1.5 rounded-md border border-input bg-sidebar w-fit">
+    <div className="flex items-center gap-2 px-3 py-1.5 rounded-md border bg-sidebar w-fit">
       <div className={cn("w-2 h-2 rounded-full", color)} />
       <code className="text-xs capitalize">{variant}</code>
     </div>

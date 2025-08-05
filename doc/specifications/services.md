@@ -1,8 +1,8 @@
-# Telemed Services
+# Consult.co Services
 
 The application is built on top of microservices architecture. It is divided in two main components : 
 - The frontend and API Gateway
-- The Telemed services
+- The services
 
 ## 💻 Frontend and API Gateway
 The frontend and API Gateway is built using [NextJS](https://nextjs.org/).
@@ -16,7 +16,7 @@ The frontend and API Gateway is built using [NextJS](https://nextjs.org/).
 3. Can integrate mechanisms for validation, logging, security (`cookies()`)
 
 ### Technologies
-- [NextJS](https://nextjs.org/) with Server Actions
+- [NextJS](https://nextjs.org/) with `api` folder
 - [React](https://reactjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
@@ -24,8 +24,8 @@ The frontend and API Gateway is built using [NextJS](https://nextjs.org/).
 - [Axios](https://www.axios.io/)
 - [React Hook Form](https://react-hook-form.com/)
 
-## 🏗️ Telemed services
-The Telemed services are built using [NestJS](https://docs.nestjs.com/).
+## 🏗️ Consult.co services
+The Consult.co services are built using [NestJS](https://docs.nestjs.com/).
 
 We chose [NestJS](https://docs.nestjs.com/) for several reasons:
 1. It is based on [Express](https://expressjs.com/), which allows us to benefit from Express's advantages.
@@ -66,6 +66,8 @@ Handles registration, login, password reset, identity verification and provides 
 - **URL** : `http://localhost:3003`
 
 **Role:** Handles appointment management. Interfaces with appointments-db, a dedicated PostgreSQL database.
+
+Each appointment will have one of the following staus: "pending" | "confirmed" | "completed" | "rejected"
 
 **Endpoints:** `POST /create` • `PUT /appointments/:id/update` • `GET /appointments` • `GET /appointments/:id` • `GET /appointments/:userId` • `DELETE /appointments/:id`
 

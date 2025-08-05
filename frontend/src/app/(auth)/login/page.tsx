@@ -1,7 +1,4 @@
-import {
-  Card,
-  CardContent,
-} from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { LoginForm } from "./_components/login-form";
 import { AuthHeader } from "@/components/shared/auth-header";
 import { GalleryVerticalEndIcon } from "lucide-react";
@@ -17,7 +14,14 @@ export default function LoginPage() {
         </CardContent>
       </Card>
       <div className="text-muted-foreground text-sm">
-        By clicking, you agree with our <Link href={"#"} className="underline">Terms</Link> and <Link href={"#"} className="underline">Privacy Policy</Link>
+        By clicking continue, you agree to our{" "}
+        <Link href={"#"} className="underline">
+          Terms of Service
+        </Link>{" "}
+        and{" "}
+        <Link href={"#"} className="underline">
+          Privacy Policy
+        </Link>
       </div>
     </div>
   );
