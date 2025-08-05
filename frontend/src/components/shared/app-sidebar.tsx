@@ -41,7 +41,7 @@ const Header = ({ state, isMobile }: SideBarHeaderProps) => {
         <SidebarMenuItem
           className={cn(
             state === "collapsed" && !isMobile
-              ? "bg-blue-700 p-0 flex items-center justify-center h-8 rounded"
+              ? "bg-blue-600 p-0 flex items-center justify-center h-8 rounded"
               : "bg-accent py-1 px-2 rounded-md",
             ""
           )}
@@ -51,7 +51,7 @@ const Header = ({ state, isMobile }: SideBarHeaderProps) => {
               className={cn(
                 state === "collapsed" && !isMobile
                   ? "size-4"
-                  : "size-10 p-2 rounded-md bg-blue-700",
+                  : "size-10 p-2 rounded-md bg-blue-600",
                 "text-white"
               )}
             />
