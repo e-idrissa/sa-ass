@@ -19,9 +19,9 @@ export const links = [
 
 export const adminLinks = [
   { label: "Analytics", href: "/admin/analytics", icon: ChartPieIcon },
-  { label: "Users", href: "/admin/users", icon: UsersRoundIcon },
   { label: "Manage Appointments", href: "/admin/appointments", icon: CalendarCogIcon },
   { label: "Manage Prescriptions", href: "/admin/prescriptions", icon: ArchiveIcon },
+  { label: "Manage Users", href: "/admin/users", icon: UsersRoundIcon },
 ];
 
 export const footerLinks = [

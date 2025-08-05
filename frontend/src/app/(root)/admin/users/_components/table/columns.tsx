@@ -6,7 +6,7 @@ import { ColumnDef } from "@tanstack/react-table";
 import { ScanBarcodeIcon } from "lucide-react";
 import { UserDetails } from "../user-details";
 import { sampleUser } from "@/lib/tmp/user";
-import { DeleteConfirmation } from "../delete-confimation";
+import { DeleteConfirmation } from "../../../../../../components/shared/delete-confimation";
 import { EditUserForm } from "../edit-user-form";
 
 export const columns: ColumnDef<IUsersTableData>[] = [
@@ -44,10 +44,11 @@ export const columns: ColumnDef<IUsersTableData>[] = [
     header: () => <div className="w-24">Role</div>,
     cell: ({ row }) => {
       const role = row.original.role;
+      const variant = role === "doctor" ? "default" : "secondary"
 
       return (
         <div className="">
-          <Badge>{role}</Badge>
+          <Badge variant={variant} className="capitalize">{role}</Badge>
         </div>
       );
     },

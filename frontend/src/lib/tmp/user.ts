@@ -1,5 +1,22 @@
 export const admin: IUser = {
-  role: "ADMIN",
+  role: "admin",
+  id: "123",
+  firstName: "Joe",
+  lastName: "Mitchell",
+  email: "admin@econsult.com",
+};
+
+export const doctor: IUser = {
+  role: "doctor",
+  id: "123",
+  firstName: "Joe",
+  lastName: "Mitchell",
+  email: "admin@econsult.com",
+};
+
+export const patient: IUser = {
+  role: "patient",
+  id: "123",
   firstName: "Joe",
   lastName: "Mitchell",
   email: "admin@econsult.com",

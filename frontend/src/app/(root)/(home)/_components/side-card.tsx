@@ -24,6 +24,8 @@ import {
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { StatCard } from "@/components/shared/stat-card";
+import { NewPrescriptionForm } from "./new-prescription-form";
+import { admin } from "@/lib/tmp/user";
 
 export const description = "A multiple bar chart";
 
@@ -47,6 +49,8 @@ const chartConfig = {
 } satisfies ChartConfig;
 
 export function SideCard() {
+  const { role, id } = admin
+
   return (
     <div className="flex flex-col gap-8">
       <Card>
@@ -67,10 +71,9 @@ export function SideCard() {
               </div>
             </div>
           </div>
-          <Button size={"sm"} className="w-full">
-            <ClipboardPlusIcon className="size-4" />
-            New Prescription
-          </Button>
+          {role === "patient" ? null : (
+            <NewPrescriptionForm doctorId={id}/>
+          )}
         </CardContent>
       </Card>
       <Card className="bg-transparent">

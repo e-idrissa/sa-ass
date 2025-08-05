@@ -1,14 +1,4 @@
-import React from "react";
-import { admin } from "@/lib/tmp/user";
-import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { PageHeader } from "@/components/shared/page-header";
 import { HeartPulseIcon, StethoscopeIcon } from "lucide-react";
@@ -18,7 +8,6 @@ import { usersTableData } from "@/lib/tmp/table-data";
 import { NewUserForm } from "./_components/new-user-form";
 import { StatCard } from "@/components/shared/stat-card";
 const Home = () => {
-  const { role } = admin;
   const doctors = usersTableData.filter((user) => user.role === "doctor");
   const pendingDoctors = doctors.filter((user) => user.isConfirmed === false);
   const confirmedDoctors = doctors.filter((user) => user.isConfirmed === true);
@@ -30,7 +19,7 @@ const Home = () => {
 
   return (
     <div className="flex flex-col gap-8">
-      <PageHeader title={"Users"} role={role} />
+      <PageHeader title={"Manage Users"} />
       <div className="w-full">
         <Tabs defaultValue="doctors" className="w-full">
           <TabsList>

@@ -3,15 +3,7 @@ type IUser = {
   firstName: string;
   lastName: string;
   email: string;
-};
-
-type IHomeTableData = {
-  user: string;
-  email: string;
-  reason: string;
-  status: string;
-  createdAt: Date;
-  updatedAt: Date;
+  id: string
 };
 
 type IUsersTableData = {
@@ -40,3 +32,12 @@ type IUserInfos = {
   bloodGroup: string;
   speciality?: string
 };
+
+type IAppointment = {
+  id: string
+  user: string
+  email: string
+  reason: string
+  status: string
+  date: Date
+}
