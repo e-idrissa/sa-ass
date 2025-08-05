@@ -58,7 +58,6 @@ export const columns: ColumnDef<IAppointment>[] = [
     id: "actions",
     header: () => <div className="w-12" />,
     cell: ({ row }) => {
-
       return (
         <div className="flex items-center">
           <AppointmentDetails appointment={row.original} />

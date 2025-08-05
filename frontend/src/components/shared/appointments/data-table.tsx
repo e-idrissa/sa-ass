@@ -63,18 +63,18 @@ export function DataTable<TData, TValue>({
   return (
     <div className="w-full">
       <div className="flex items-center pb-4 gap-4 justify-end">
-          <Input
-            placeholder="Filter users..."
-            value={(table.getColumn("user")?.getFilterValue() as string) ?? ""}
-            onChange={(event) =>
-              table.getColumn("user")?.setFilterValue(event.target.value)
-            }
-            className="w-70"
-          />
-          <Button variant={"outline"} size={"icon"}>
-            <RefreshCcwIcon />
-          </Button>
-        </div>
+        <Input
+          placeholder="Filter users..."
+          value={(table.getColumn("user")?.getFilterValue() as string) ?? ""}
+          onChange={(event) =>
+            table.getColumn("user")?.setFilterValue(event.target.value)
+          }
+          className="w-70"
+        />
+        <Button variant={"outline"} size={"icon"}>
+          <RefreshCcwIcon />
+        </Button>
+      </div>
       <div className="overflow-hidden rounded-md border">
         <Table>
           <TableHeader>

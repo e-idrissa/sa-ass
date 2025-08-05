@@ -14,7 +14,7 @@ import {
 import { InfoIcon } from "lucide-react";
 
 interface Props {
-  appointment: IAppointment
+  appointment: IAppointment;
 }
 
 export function AppointmentDetails({ appointment }: Props) {

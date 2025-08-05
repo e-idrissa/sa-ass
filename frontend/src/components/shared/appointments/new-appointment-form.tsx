@@ -51,7 +51,7 @@ interface Props {
   role: string;
   patientId?: string;
   doctorId?: string;
-  users: IUsersTableData[]
+  users: IUsersTableData[];
 }
 
 const FormSchema = z.object({
@@ -67,7 +67,12 @@ const FormSchema = z.object({
   date: z.date(),
 });
 
-export const NewAppointmentForm = ({ patientId, doctorId, role, users }: Props) => {
+export const NewAppointmentForm = ({
+  patientId,
+  doctorId,
+  role,
+  users,
+}: Props) => {
   const [open, setOpen] = useState(false);
   const [date, setDate] = useState<Date | undefined>(undefined);
 
@@ -231,14 +236,14 @@ export const NewAppointmentForm = ({ patientId, doctorId, role, users }: Props) 
                       </PopoverContent>
                     </Popover>
                     <div className="relative w-[40%]">
-                    <Input
-                      type="time"
-                      id="time-picker"
-                      step="1"
-                      defaultValue="10:30:00"
-                      className="inset-0 z-10 w-full bg-background appearance-none [&::-webkit-calendar-picker-indicator]:hidden [&::-webkit-calendar-picker-indicator]:appearance-none"
-                    />
-                    <ClockIcon className="absolute right-2 top-[0.6rem] size-4 opacity-30"/>
+                      <Input
+                        type="time"
+                        id="time-picker"
+                        step="1"
+                        defaultValue="10:30:00"
+                        className="inset-0 z-10 w-full bg-background appearance-none [&::-webkit-calendar-picker-indicator]:hidden [&::-webkit-calendar-picker-indicator]:appearance-none"
+                      />
+                      <ClockIcon className="absolute right-2 top-[0.6rem] size-4 opacity-30" />
                     </div>
                   </div>
                   <FormMessage />

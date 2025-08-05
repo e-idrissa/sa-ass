@@ -14,7 +14,7 @@ import {
 import { PenIcon } from "lucide-react";
 
 interface Props {
-  appointment: IAppointment
+  appointment: IAppointment;
 }
 
 export function EditAppointmentForm({ appointment }: Props) {

@@ -1,11 +1,11 @@
 import { PageHeader } from "@/components/shared/page-header";
 import { admin } from "@/lib/tmp/user";
 import { DataTable } from "@/components/shared/appointments/data-table";
-import { columns } from "@/components/shared/appointments/admin-columns";
 import { NewAppointmentForm } from "@/components/shared/appointments/new-appointment-form";
 import { homeTableData, usersTableData } from "@/lib/tmp/table-data";
 import { Card, CardContent, CardTitle } from "@/components/ui/card";
 import { StatCard } from "@/components/shared/stat-card";
+import { columns } from "@/components/shared/appointments/columns";
 
 const AppointmentsPage = () => {
   const { role, id } = admin;
@@ -25,7 +25,7 @@ const AppointmentsPage = () => {
 
   return (
     <div className="flex flex-col gap-8">
-      <PageHeader title={"Manage Appointments"} />
+      <PageHeader title={"Appointments"} />
       <div className="flex gap-8">
         <div className="w-2/3">
           <DataTable columns={columns} data={homeTableData} />
