@@ -4,7 +4,7 @@ import React from "react";
 import { Hometable } from "./_components/home-table";
 import { SideCard } from "./_components/side-card";
 
-const Home = () => {
+const HomePage = () => {
   const { role } = admin;
   return (
     <div className="flex flex-col gap-8">
@@ -21,4 +21,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomePage;
