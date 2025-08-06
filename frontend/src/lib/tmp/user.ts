@@ -25,7 +25,7 @@ export const patient: IUser = {
 export const sampleUser: IUserInfos = {
   id: "usr_123456789",
   role: "doctor",
-  isConfirmed: true,
+  isConfirmed: false,
   matricule: 1001,
   email: "dr.john.smith@example.com",
   user: "Dr. John Smith",

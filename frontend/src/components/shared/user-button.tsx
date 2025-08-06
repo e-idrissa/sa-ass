@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import { useRouter } from "next/navigation";
 import { DropdownMenu, DropdownMenuItem, DropdownMenuSeparator } from "../ui/dropdown-menu";
 import { DropdownMenuContent, DropdownMenuTrigger } from "../ui/dropdown-menu";
 import { LogOut, UserRoundIcon, WalletMinimalIcon } from "lucide-react";
@@ -8,6 +10,8 @@ type Props = {
 };
 
 const UserButton = ({ user }: Props) => {
+  const router = useRouter()
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger>
@@ -17,7 +21,7 @@ const UserButton = ({ user }: Props) => {
         side="top"
         className="w-[--radix-popper-anchor-width]"
       >
-        <DropdownMenuItem>
+        <DropdownMenuItem onClick={() => router.push("/profile")}>
           <div className="flex items-center gap-2">
             <UserRoundIcon className="size-10 bg-blue-600/20  text-blue-600 rounded-full p-2 " />
             <div>
