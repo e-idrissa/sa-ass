@@ -13,7 +13,7 @@ import { Button } from "@/components/ui/button"
 import { Trash2Icon } from "lucide-react"
 
 interface Props {
- id: string 
+ id: string | number
 }
 
 export function DeleteConfirmation({ id }: Props) {

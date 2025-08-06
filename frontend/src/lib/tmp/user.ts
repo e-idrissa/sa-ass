@@ -1,5 +1,22 @@
 export const admin: IUser = {
-  role: "ADMIN",
+  role: "admin",
+  id: "123",
+  firstName: "Joe",
+  lastName: "Mitchell",
+  email: "admin@econsult.com",
+};
+
+export const doctor: IUser = {
+  role: "doctor",
+  id: "123",
+  firstName: "Joe",
+  lastName: "Mitchell",
+  email: "admin@econsult.com",
+};
+
+export const patient: IUser = {
+  role: "patient",
+  id: "123",
   firstName: "Joe",
   lastName: "Mitchell",
   email: "admin@econsult.com",
@@ -8,7 +25,7 @@ export const admin: IUser = {
 export const sampleUser: IUserInfos = {
   id: "usr_123456789",
   role: "doctor",
-  isConfirmed: true,
+  isConfirmed: false,
   matricule: 1001,
   email: "dr.john.smith@example.com",
   user: "Dr. John Smith",

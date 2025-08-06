@@ -119,7 +119,7 @@ export const AppSidebar = ({ user }: { user: IUser }) => {
             <Menu links={links} pathname={pathname} />
           </SidebarGroupContent>
         </SidebarGroup>
-        {user.role === "ADMIN" && (
+        {user.role === "admin" && (
           <SidebarGroup>
             <SidebarGroupLabel>Administration</SidebarGroupLabel>
             <SidebarGroupContent>

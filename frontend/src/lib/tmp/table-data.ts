@@ -1,91 +1,91 @@
 export const homeTableData = [
   {
+    id: "1",
     user: "Adam Smith",
     email: "adam@consult.com",
     reason: "Lorem ipsum dolor sit amet, consectetur adipisicing",
     status: "pending",
-    createdAt: new Date("2025-07-23"),
-    updatedAt: new Date("2025-07-25"),
+    date: new Date("2025-08-25"),
   },
   {
+    id: "2",
     user: "Adam Smith",
     email: "adam@consult.com",
     reason: "Lorem ipsum dolor sit amet, consectetur adipisicing",
     status: "pending",
-    createdAt: new Date("2025-07-23"),
-    updatedAt: new Date("2025-07-25"),
+    date: new Date("2025-08-25"),
   },
   {
+    id: "3",
     user: "Adam Smith",
     email: "adam@consult.com",
     reason: "Lorem ipsum dolor sit amet, consectetur adipisicing",
     status: "pending",
-    createdAt: new Date("2025-07-23"),
-    updatedAt: new Date("2025-07-25"),
+    date: new Date("2025-08-25"),
   },
   {
+    id: "4",
     user: "Adam Smith",
     email: "adam@consult.com",
     reason: "Lorem ipsum dolor sit amet, consectetur adipisicing",
     status: "confirmed",
-    createdAt: new Date("2025-07-23"),
-    updatedAt: new Date("2025-07-25"),
+    date: new Date("2025-08-25"),
   },
   {
+    id: "5",
     user: "Adam Smith",
     email: "adam@consult.com",
     reason: "Lorem ipsum dolor sit amet, consectetur adipisicing",
     status: "completed",
-    createdAt: new Date("2025-07-23"),
-    updatedAt: new Date("2025-07-25"),
+    date: new Date("2025-08-25"),
   },
   {
+    id: "6",
     user: "Adam Smith",
     email: "adam@consult.com",
     reason: "Lorem ipsum dolor sit amet, consectetur adipisicing",
     status: "rejected",
-    createdAt: new Date("2025-07-23"),
-    updatedAt: new Date("2025-07-25"),
+    date: new Date("2025-08-25"),
   },
   {
+    id: "7",
     user: "Adam Smith",
     email: "adam@consult.com",
     reason: "Lorem ipsum dolor sit amet, consectetur adipisicing",
     status: "completed",
-    createdAt: new Date("2025-07-23"),
-    updatedAt: new Date("2025-07-25"),
+    date: new Date("2025-08-25"),
   },
   {
+    id: "8",
     user: "Adam Smith",
     email: "adam@consult.com",
     reason: "Lorem ipsum dolor sit amet, consectetur adipisicing",
     status: "pending",
-    createdAt: new Date("2025-07-23"),
-    updatedAt: new Date("2025-07-25"),
+    date: new Date("2025-08-25"),
   },
   {
+    id: "9",
     user: "Adam Smith",
     email: "adam@consult.com",
     reason: "Lorem ipsum dolor sit amet, consectetur adipisicing",
     status: "confirmed",
-    createdAt: new Date("2025-07-23"),
-    updatedAt: new Date("2025-07-25"),
+    date: new Date("2025-08-25"),
   },
   {
+    id: "10",
     user: "Adam Smith",
     email: "adam@consult.com",
     reason: "Lorem ipsum dolor sit amet, consectetur adipisicing",
     status: "completed",
-    createdAt: new Date("2025-07-23"),
-    updatedAt: new Date("2025-07-25"),
+    date: new Date("2025-08-25"),
   },
   {
+    id: "11",
     user: "Adam Smith",
     email: "adam@consult.com",
     reason: "Lorem ipsum dolor sit amet, consectetur adipisicing",
     status: "completed",
-    createdAt: new Date("2025-07-23"),
-    updatedAt: new Date("2025-07-25"),
+    date: new Date("2025-08-25"),
   },
 ];
 
@@ -181,3 +181,492 @@ export const usersTableData: IUsersTableData[] = [
     telephone: "+1222333444",
   },
 ];
+
+export const prescriptionsData: IPrescription[] = [
+  {
+    id: 1,
+    doctor: "Alexander Dowie",
+    patient: "Mai Lee",
+    drugDosage: [
+      {
+        id: "00001",
+        drugId: "00001",
+        frequency: "3 x 3",
+      },
+      {
+        id: "00002",
+        drugId: "00001",
+        frequency: "3 x 3",
+      },
+      {
+        id: "00003",
+        drugId: "00001",
+        frequency: "3 x 3",
+      },
+    ],
+    recordUrl: "http://my-storage.com",
+    createdAt: new Date("2025-07-25")
+  },
+  {
+    id: 2,
+    doctor: "Alexander Dowie",
+    patient: "Mai Lee",
+    drugDosage: [
+      {
+        id: "00001",
+        drugId: "00001",
+        frequency: "3 x 3",
+      },
+      {
+        id: "00002",
+        drugId: "00001",
+        frequency: "3 x 3",
+      },
+      {
+        id: "00003",
+        drugId: "00001",
+        frequency: "3 x 3",
+      },
+    ],
+    recordUrl: "http://my-storage.com",
+    createdAt: new Date("2025-07-25")
+  },
+  {
+    id: 3,
+    doctor: "Alexander Dowie",
+    patient: "Mai Lee",
+    drugDosage: [
+      {
+        id: "00001",
+        drugId: "00001",
+        frequency: "3 x 3",
+      },
+      {
+        id: "00002",
+        drugId: "00001",
+        frequency: "3 x 3",
+      },
+      {
+        id: "00003",
+        drugId: "00001",
+        frequency: "3 x 3",
+      },
+    ],
+    recordUrl: "http://my-storage.com",
+    createdAt: new Date("2025-07-25")
+  },
+  {
+    id: 4,
+    doctor: "Alexander Dowie",
+    patient: "Mai Lee",
+    drugDosage: [
+      {
+        id: "00001",
+        drugId: "00001",
+        frequency: "3 x 3",
+      },
+      {
+        id: "00002",
+        drugId: "00001",
+        frequency: "3 x 3",
+      },
+      {
+        id: "00003",
+        drugId: "00001",
+        frequency: "3 x 3",
+      },
+    ],
+    recordUrl: "http://my-storage.com",
+    createdAt: new Date("2025-07-25")
+  },
+  {
+    id: 5,
+    doctor: "Alexander Dowie",
+    patient: "Mai Lee",
+    drugDosage: [
+      {
+        id: "00001",
+        drugId: "00001",
+        frequency: "3 x 3",
+      },
+      {
+        id: "00002",
+        drugId: "00001",
+        frequency: "3 x 3",
+      },
+      {
+        id: "00003",
+        drugId: "00001",
+        frequency: "3 x 3",
+      },
+    ],
+    recordUrl: "http://my-storage.com",
+    createdAt: new Date("2025-07-25")
+  },
+  {
+    id: 6,
+    doctor: "Alexander Dowie",
+    patient: "Mai Lee",
+    drugDosage: [
+      {
+        id: "00001",
+        drugId: "00001",
+        frequency: "3 x 3",
+      },
+      {
+        id: "00002",
+        drugId: "00001",
+        frequency: "3 x 3",
+      },
+      {
+        id: "00003",
+        drugId: "00001",
+        frequency: "3 x 3",
+      },
+    ],
+    recordUrl: "http://my-storage.com",
+    createdAt: new Date("2025-07-25")
+  },
+  {
+    id: 7,
+    doctor: "Alexander Dowie",
+    patient: "Mai Lee",
+    drugDosage: [
+      {
+        id: "00001",
+        drugId: "00001",
+        frequency: "3 x 3",
+      },
+      {
+        id: "00002",
+        drugId: "00001",
+        frequency: "3 x 3",
+      },
+      {
+        id: "00003",
+        drugId: "00001",
+        frequency: "3 x 3",
+      },
+    ],
+    recordUrl: "http://my-storage.com",
+    createdAt: new Date("2025-07-25")
+  },
+  {
+    id: 8,
+    doctor: "Alexander Dowie",
+    patient: "Mai Lee",
+    drugDosage: [
+      {
+        id: "00001",
+        drugId: "00001",
+        frequency: "3 x 3",
+      },
+      {
+        id: "00002",
+        drugId: "00001",
+        frequency: "3 x 3",
+      },
+      {
+        id: "00003",
+        drugId: "00001",
+        frequency: "3 x 3",
+      },
+    ],
+    recordUrl: "http://my-storage.com",
+    createdAt: new Date("2025-07-25")
+  },
+  {
+    id: 9,
+    doctor: "Alexander Dowie",
+    patient: "Mai Lee",
+    drugDosage: [
+      {
+        id: "00001",
+        drugId: "00001",
+        frequency: "3 x 3",
+      },
+      {
+        id: "00002",
+        drugId: "00001",
+        frequency: "3 x 3",
+      },
+      {
+        id: "00003",
+        drugId: "00001",
+        frequency: "3 x 3",
+      },
+    ],
+    recordUrl: "http://my-storage.com",
+    createdAt: new Date("2025-07-25")
+  },
+  {
+    id: 10,
+    doctor: "Alexander Dowie",
+    patient: "Mai Lee",
+    drugDosage: [
+      {
+        id: "00001",
+        drugId: "00001",
+        frequency: "3 x 3",
+      },
+      {
+        id: "00002",
+        drugId: "00001",
+        frequency: "3 x 3",
+      },
+      {
+        id: "00003",
+        drugId: "00001",
+        frequency: "3 x 3",
+      },
+    ],
+    recordUrl: "http://my-storage.com",
+    createdAt: new Date("2025-07-25")
+  },
+  {
+    id: 11,
+    doctor: "Alexander Dowie",
+    patient: "Mai Lee",
+    drugDosage: [
+      {
+        id: "00001",
+        drugId: "00001",
+        frequency: "3 x 3",
+      },
+      {
+        id: "00002",
+        drugId: "00001",
+        frequency: "3 x 3",
+      },
+      {
+        id: "00003",
+        drugId: "00001",
+        frequency: "3 x 3",
+      },
+    ],
+    recordUrl: "http://my-storage.com",
+    createdAt: new Date("2025-07-25")
+  },
+  {
+    id: 12,
+    doctor: "Alexander Dowie",
+    patient: "Mai Lee",
+    drugDosage: [
+      {
+        id: "00001",
+        drugId: "00001",
+        frequency: "3 x 3",
+      },
+      {
+        id: "00002",
+        drugId: "00001",
+        frequency: "3 x 3",
+      },
+      {
+        id: "00003",
+        drugId: "00001",
+        frequency: "3 x 3",
+      },
+    ],
+    recordUrl: "http://my-storage.com",
+    createdAt: new Date("2025-07-20")
+  },
+  ,
+  {
+    id: 13,
+    doctor: "Alexander Dowie",
+    patient: "Mai Lee",
+    drugDosage: [
+      {
+        id: "00001",
+        drugId: "00001",
+        frequency: "3 x 3",
+      },
+      {
+        id: "00002",
+        drugId: "00001",
+        frequency: "3 x 3",
+      },
+      {
+        id: "00003",
+        drugId: "00001",
+        frequency: "3 x 3",
+      },
+    ],
+    recordUrl: "http://my-storage.com",
+    createdAt: new Date("2025-07-20")
+  },
+  ,
+  {
+    id: 14,
+    doctor: "Alexander Dowie",
+    patient: "Mai Lee",
+    drugDosage: [
+      {
+        id: "00001",
+        drugId: "00001",
+        frequency: "3 x 3",
+      },
+      {
+        id: "00002",
+        drugId: "00001",
+        frequency: "3 x 3",
+      },
+      {
+        id: "00003",
+        drugId: "00001",
+        frequency: "3 x 3",
+      },
+    ],
+    recordUrl: "http://my-storage.com",
+    createdAt: new Date("2025-07-20")
+  },
+  ,
+  {
+    id: 15,
+    doctor: "Alexander Dowie",
+    patient: "Mai Lee",
+    drugDosage: [
+      {
+        id: "00001",
+        drugId: "00001",
+        frequency: "3 x 3",
+      },
+      {
+        id: "00002",
+        drugId: "00001",
+        frequency: "3 x 3",
+      },
+      {
+        id: "00003",
+        drugId: "00001",
+        frequency: "3 x 3",
+      },
+    ],
+    recordUrl: "http://my-storage.com",
+    createdAt: new Date("2025-07-20")
+  },
+  ,
+  {
+    id: 16,
+    doctor: "Alexander Dowie",
+    patient: "Mai Lee",
+    drugDosage: [
+      {
+        id: "00001",
+        drugId: "00001",
+        frequency: "3 x 3",
+      },
+      {
+        id: "00002",
+        drugId: "00001",
+        frequency: "3 x 3",
+      },
+      {
+        id: "00003",
+        drugId: "00001",
+        frequency: "3 x 3",
+      },
+    ],
+    recordUrl: "http://my-storage.com",
+    createdAt: new Date("2025-07-20")
+  },
+  ,
+  {
+    id: 17,
+    doctor: "Alexander Dowie",
+    patient: "Mai Lee",
+    drugDosage: [
+      {
+        id: "00001",
+        drugId: "00001",
+        frequency: "3 x 3",
+      },
+      {
+        id: "00002",
+        drugId: "00001",
+        frequency: "3 x 3",
+      },
+      {
+        id: "00003",
+        drugId: "00001",
+        frequency: "3 x 3",
+      },
+    ],
+    recordUrl: "http://my-storage.com",
+    createdAt: new Date("2025-07-20")
+  },
+  ,
+  {
+    id: 18,
+    doctor: "Alexander Dowie",
+    patient: "Mai Lee",
+    drugDosage: [
+      {
+        id: "00001",
+        drugId: "00001",
+        frequency: "3 x 3",
+      },
+      {
+        id: "00002",
+        drugId: "00001",
+        frequency: "3 x 3",
+      },
+      {
+        id: "00003",
+        drugId: "00001",
+        frequency: "3 x 3",
+      },
+    ],
+    recordUrl: "http://my-storage.com",
+    createdAt: new Date("2025-07-20")
+  },
+  {
+    id: 19,
+    doctor: "Alexander Dowie",
+    patient: "Mai Lee",
+    drugDosage: [
+      {
+        id: "00001",
+        drugId: "00001",
+        frequency: "3 x 3",
+      },
+      {
+        id: "00002",
+        drugId: "00001",
+        frequency: "3 x 3",
+      },
+      {
+        id: "00003",
+        drugId: "00001",
+        frequency: "3 x 3",
+      },
+    ],
+    recordUrl: "http://my-storage.com",
+    createdAt: new Date("2025-07-20")
+  },
+  {
+    id: 20,
+    doctor: "Alexander Dowie",
+    patient: "Mai Lee",
+    drugDosage: [
+      {
+        id: "00001",
+        drugId: "00001",
+        frequency: "3 x 3",
+      },
+      {
+        id: "00002",
+        drugId: "00001",
+        frequency: "3 x 3",
+      },
+      {
+        id: "00003",
+        drugId: "00001",
+        frequency: "3 x 3",
+      },
+    ],
+    recordUrl: "http://my-storage.com",
+    createdAt: new Date("2025-07-20")
+  },
+]
