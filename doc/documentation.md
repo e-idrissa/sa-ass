@@ -1,4 +1,4 @@
-# ⚕️eConsult
+# ⚕️Consult.co
 
 This is a microservices app build with [Next.JS](https://nextjs.org/) that handles the UI part and the Next.JS `Server Actions` plays the API Gateway. Services are developed with [Nest.JS](https://docs.nestjs.com/), a powerful JavaScript framework to build scalable and high performance web applications.
 
