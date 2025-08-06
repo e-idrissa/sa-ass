@@ -1,9 +1,9 @@
 import {
   Calendar,
   CalendarCogIcon,
-  ChartPieIcon,
   ClipboardListIcon,
   FolderIcon,
+  GaugeCircleIcon,
   HomeIcon,
   InfoIcon,
   UsersRoundIcon,
@@ -16,7 +16,7 @@ export const links = [
 ];
 
 export const adminLinks = [
-  { label: "Analytics", href: "/admin/analytics", icon: ChartPieIcon },
+  { label: "Analytics", href: "/admin/analytics", icon: GaugeCircleIcon },
   { label: "Manage Appointments", href: "/admin/appointments", icon: CalendarCogIcon },
   { label: "Manage Prescriptions", href: "/admin/prescriptions", icon: FolderIcon },
   { label: "Manage Users", href: "/admin/users", icon: UsersRoundIcon },

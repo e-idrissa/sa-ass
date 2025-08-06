@@ -56,7 +56,7 @@ const PrescriptionCard = ({
         <div className="flex flex-col gap-1 items-center">
           <FileTextIcon className="size-16 mb-3 stroke-1" />
           <p className="text-sm text-center font-medium">
-            Prescription #${prescription.id}
+            Prescription #{prescription.id}
           </p>
           <p className="text-xs text-center text-muted-foreground">
             Since 12 days
@@ -102,7 +102,8 @@ export const PrescriptionGrid = ({
         <CardContent
           className={cn(
             "size-full grid gap-8 max-h-170",
-            page === "admin/prescriptions" ? "grid-cols-8" : "grid-cols-6"
+            page === "admin/prescriptions" ? "grid-cols-8" : 
+            page === "profile" ? "grid-cols-5" : "grid-cols-6"
           )}
         >
           {data.map((p) => (

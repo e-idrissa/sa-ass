@@ -21,8 +21,8 @@ const ProfilePage = () => {
   const prescriptions = prescriptionsData;
 
   return (
-    <div className="flex gap-8 py-16">
-      <div className="flex flex-col items-center gap-8 w-1/3">
+    <div className="flex gap-8 items-center py-8">
+      <div className="flex flex-col items-center gap-8 w-2/5">
         <UserRoundIcon className="size-30 rounded-full stroke-1 p-6 bg-sidebar" />
         <div className="flex items-center gap-2">
           <Badge variant={"secondary"} className="capitalize">
@@ -62,7 +62,7 @@ const ProfilePage = () => {
             {user.pound}
           </div>
         </div>
-        <Card className="bg-transparent w-96">
+        <Card className="bg-transparent w-2/3">
           <CardContent>
             <CardHeader className="bg-card flex items-center py-4 rounded-lg">
               <ShieldIcon />
@@ -82,11 +82,12 @@ const ProfilePage = () => {
           </CardContent>
         </Card>
       </div>
-      <div className="flex gap-8 w-2/3">
+      <div className="flex gap-8 w-3/5">
         <PrescriptionGrid
           role={sampleUser.role}
           userId={sampleUser.id}
           prescriptions={prescriptions}
+          page="profile"
         />
       </div>
     </div>
