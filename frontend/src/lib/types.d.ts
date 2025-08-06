@@ -41,3 +41,23 @@ type IAppointment = {
   status: string
   date: Date
 }
+
+type IDrug = {
+  id: string
+  name: string
+}
+
+type IDrugDosage = {
+  id: string
+  drugId: string
+  frequency: string
+}
+
+type IPrescription = {
+  id: number
+  doctor: string
+  patient: string
+  drugDosage: IDrugDosage[]
+  recordUrl?: string
+  createdAt: Date
+}
