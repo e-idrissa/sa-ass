@@ -61,3 +61,8 @@ type IPrescription = {
   recordUrl?: string
   createdAt: Date
 }
+
+type IDrug = {
+  id: string
+  name: string
+}

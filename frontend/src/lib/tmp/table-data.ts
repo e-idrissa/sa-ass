@@ -670,3 +670,46 @@ export const prescriptionsData: IPrescription[] = [
     createdAt: new Date("2025-07-20")
   },
 ]
+
+export const drugsData: IDrug[] = [
+  {
+    id: "00001",
+    name: "Paracetamol",
+  },
+  {
+    id: "00002",
+    name: "Aspirin",
+  },
+  {
+    id: "00003",
+    name: "Ibuprofen",
+  },
+  {
+    id: "00004",
+    name: "Amoxicillin",
+  },
+  {
+    id: "00005",
+    name: "Cetirizine",
+  },
+  {
+    id: "00006",
+    name: "Metformin",
+  },
+  {
+    id: "00007",
+    name: "Lisinopril",
+  },
+  {
+    id: "00008",
+    name: "Simvastatin",
+  },
+  {
+    id: "00009",
+    name: "Omeprazole",
+  },
+  {
+    id: "00010",
+    name: "Azithromycin",
+  },
+]

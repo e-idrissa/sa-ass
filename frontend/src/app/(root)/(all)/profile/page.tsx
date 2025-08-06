@@ -64,9 +64,9 @@ const ProfilePage = () => {
         </div>
         <Card className="bg-transparent w-2/3">
           <CardContent>
-            <CardHeader className="bg-card flex items-center py-4 rounded-lg">
+            <CardHeader className="bg-card flex items-center py-4 rounded-lg font-semibold">
               <ShieldIcon />
-              Secutity
+              Security
             </CardHeader>
             <div className="mt-4 text-muted-foreground text-sm">
               Be careful with this section. It is about your password. If you

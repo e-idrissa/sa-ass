@@ -101,7 +101,8 @@ export const PrescriptionGrid = ({
       <ScrollArea className="">
         <CardContent
           className={cn(
-            "size-full grid gap-8 max-h-170",
+            "size-full grid gap-8",
+            page === "admin/analytics" ? "max-h-120" : "max-h-170",
             page === "admin/prescriptions" ? "grid-cols-8" : 
             page === "profile" ? "grid-cols-5" : "grid-cols-6"
           )}

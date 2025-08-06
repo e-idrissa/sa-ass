@@ -10,7 +10,7 @@ const PrescriptionsPage = () => {
 
   return (
     <div className="flex flex-col gap-8">
-      <PageHeader title={"Prescriptions"} />
+      <PageHeader title={"Manage Prescriptions"} />
       <div className="flex gap-8">
         <div className="w-full">
           <PrescriptionGrid
