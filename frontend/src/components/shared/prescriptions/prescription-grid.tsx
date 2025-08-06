@@ -14,13 +14,14 @@ import { EditPrescriptionFrom } from "./edit-prescription-form";
 import { DeleteConfirmation } from "../delete-confimation";
 import { FileTextIcon } from "lucide-react";
 import { Filter } from "./filter";
-import { formatDate } from "@/lib/utils";
+import { cn, formatDate } from "@/lib/utils";
 import { ScrollArea } from "@/components/ui/scroll-area";
 
 interface Props {
   userId: string;
   role: string;
   prescriptions: IPrescription[];
+  page?: string;
 }
 
 interface CardProps {
@@ -66,7 +67,12 @@ const PrescriptionCard = ({
   );
 };
 
-export const PrescriptionGrid = ({ userId, role, prescriptions }: Props) => {
+export const PrescriptionGrid = ({
+  userId,
+  role,
+  prescriptions,
+  page,
+}: Props) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [date, setDate] = useState<Date | undefined>(undefined);
 
@@ -78,8 +84,11 @@ export const PrescriptionGrid = ({ userId, role, prescriptions }: Props) => {
     <Card className="bg-transparent">
       <CardHeader className="flex items-center justify-between">
         <div>
-          <CardTitle className="text-xl text-semibold">
+          <CardTitle className="text-xl text-semibold flex items-center gap-2">
             Prescription Grid
+            <div className="flex items-center rounded-md border-2 px-2 py-1.5 gap-2">
+              <span className="text-sm text-blue-600">{data.length}</span>
+            </div>
           </CardTitle>
           <CardDescription>
             {date
@@ -90,7 +99,12 @@ export const PrescriptionGrid = ({ userId, role, prescriptions }: Props) => {
         <Filter date={date} setDate={setDate} />
       </CardHeader>
       <ScrollArea className="">
-        <CardContent className="size-full grid grid-cols-6 gap-8 max-h-170">
+        <CardContent
+          className={cn(
+            "size-full grid gap-8 max-h-170",
+            page === "admin/prescriptions" ? "grid-cols-8" : "grid-cols-6"
+          )}
+        >
           {data.map((p) => (
             <PrescriptionCard
               key={p.id}
