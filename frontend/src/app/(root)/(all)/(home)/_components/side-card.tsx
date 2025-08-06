@@ -1,7 +1,6 @@
 "use client";
 
 import {
-  ClipboardPlusIcon,
   FileSpreadsheetIcon,
   TrendingUp,
 } from "lucide-react";
@@ -21,8 +20,6 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
-import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
 import { StatCard } from "@/components/shared/stat-card";
 import { NewPrescriptionForm } from "./new-prescription-form";
 import { admin } from "@/lib/tmp/user";

@@ -30,7 +30,7 @@ export function DeleteConfirmation({ id }: Props) {
             account and remove your data from our servers.
           </AlertDialogDescription>
         </AlertDialogHeader>
-        <AlertDialogFooter>
+        <AlertDialogFooter className="mt-4">
           <AlertDialogCancel>Cancel</AlertDialogCancel>
           <AlertDialogAction className="bg-destructive text-white">Continue</AlertDialogAction>
         </AlertDialogFooter>
