@@ -1,4 +1,12 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import {
+  Controller,
+  Get,
+  Post,
+  Body,
+  Patch,
+  Param,
+  Delete,
+} from '@nestjs/common';
 import { LogoutService } from './logout.service';
 import { CreateLogoutDto } from './dto/create-logout.dto';
 import { UpdateLogoutDto } from './dto/update-logout.dto';

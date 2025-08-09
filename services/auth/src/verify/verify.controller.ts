@@ -1,4 +1,12 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import {
+  Controller,
+  Get,
+  Post,
+  Body,
+  Patch,
+  Param,
+  Delete,
+} from '@nestjs/common';
 import { VerifyService } from './verify.service';
 import { CreateVerifyDto } from './dto/create-verify.dto';
 import { UpdateVerifyDto } from './dto/update-verify.dto';
