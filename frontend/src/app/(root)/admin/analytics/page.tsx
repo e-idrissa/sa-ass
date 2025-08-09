@@ -75,7 +75,7 @@ const AnalyticsPage = () => {
                       <PillIcon className="size-4" />
                       {drug.name}
                     </div>
-                    <DeleteConfirmation id={drug.id} />
+                    <DeleteConfirmation id={drug.id} category="drug" />
                   </div>
                   <Separator className="my-2" />
                 </React.Fragment>

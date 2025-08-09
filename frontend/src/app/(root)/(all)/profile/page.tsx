@@ -14,7 +14,8 @@ import {
 import React from "react";
 import PasswordDrawer from "./_components/password-drawer";
 import { PrescriptionGrid } from "@/components/shared/prescriptions/prescription-grid";
-import { prescriptionsData } from "@/lib/tmp/table-data";
+import { homeTableData, prescriptionsData } from "@/lib/tmp/table-data";
+import { WeekAppointments } from "./_components/week-appointments";
 
 const ProfilePage = () => {
   const user = sampleUser;
@@ -29,10 +30,10 @@ const ProfilePage = () => {
             {user.role}
           </Badge>
           <Badge
-            variant={user.isConfirmed ? "default" : "warning"}
+            variant={user.isVerified ? "success" : "warning"}
             className="capitalize"
           >
-            {user.isConfirmed ? "Confirmed" : "Pending"}
+            {user.isVerified ? "Verified" : "Pending"}
           </Badge>
         </div>
         <div className="space-y-2">
@@ -62,7 +63,8 @@ const ProfilePage = () => {
             {user.pound}
           </div>
         </div>
-        <Card className="bg-transparent w-2/3">
+        <WeekAppointments appointments={homeTableData} />
+        <Card className="bg-transparent w-127">
           <CardContent>
             <CardHeader className="bg-card flex items-center py-4 rounded-lg font-semibold">
               <ShieldIcon />

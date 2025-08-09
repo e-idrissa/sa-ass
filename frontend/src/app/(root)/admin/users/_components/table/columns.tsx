@@ -86,7 +86,7 @@ export const columns: ColumnDef<IUsersTableData>[] = [
         <div className="flex items-center">
           <UserDetails user={user} />
           <EditUserForm user={user} />
-          <DeleteConfirmation id={row.original.id} />
+          <DeleteConfirmation id={row.original.id} category="user"/>
         </div>
       );
     },

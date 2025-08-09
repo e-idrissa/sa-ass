@@ -25,7 +25,7 @@ export const patient: IUser = {
 export const sampleUser: IUserInfos = {
   id: "usr_123456789",
   role: "doctor",
-  isConfirmed: false,
+  isVerified: true,
   matricule: 1001,
   email: "dr.john.smith@example.com",
   user: "Dr. John Smith",
@@ -38,3 +38,41 @@ export const sampleUser: IUserInfos = {
   bloodGroup: "A+",
   speciality: "Cardiology"
 };
+
+export const weekAppointments: IWeekAppointments[] = [
+  {
+    date: "2",
+    day: "Mon",
+    count: 4,
+  },
+  {
+    date: "3",
+    day: "Tue",
+    count: 4,
+  },
+  {
+    date: "4",
+    day: "Wed",
+    count: 4,
+  },
+  {
+    date: "4",
+    day: "Thu",
+    count: 0,
+  },
+  {
+    date: "5",
+    day: "Fri",
+    count: 4,
+  },
+  {
+    date: "7",
+    day: "Sat",
+    count: 4,
+  },
+  {
+    date: "8",
+    day: "Sun",
+    count: 0,
+  },
+]

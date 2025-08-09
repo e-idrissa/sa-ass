@@ -9,12 +9,12 @@ import { NewUserForm } from "./_components/new-user-form";
 import { StatCard } from "@/components/shared/stat-card";
 const Home = () => {
   const doctors = usersTableData.filter((user) => user.role === "doctor");
-  const pendingDoctors = doctors.filter((user) => user.isConfirmed === false);
-  const confirmedDoctors = doctors.filter((user) => user.isConfirmed === true);
+  const pendingDoctors = doctors.filter((user) => user.isVerified === false);
+  const confirmedDoctors = doctors.filter((user) => user.isVerified === true);
   const patients = usersTableData.filter((user) => user.role === "patient");
-  const pendingPatients = patients.filter((user) => user.isConfirmed === false);
+  const pendingPatients = patients.filter((user) => user.isVerified === false);
   const confirmedPatients = patients.filter(
-    (user) => user.isConfirmed === true
+    (user) => user.isVerified === true
   );
 
   return (

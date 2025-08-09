@@ -11,3 +11,9 @@ export function formatDate(date: Date): string {
 
   return value;
 }
+
+export function formatDateWithTime(date: Date): string {
+  const value = format(date, "PPpp");
+
+  return value;
+}

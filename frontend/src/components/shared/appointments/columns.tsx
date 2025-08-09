@@ -16,19 +16,22 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { CheckIcon, MoreHorizontalIcon, XIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { admin } from "@/lib/tmp/user";
 
 export const columns: ColumnDef<IAppointment>[] = [
   {
     accessorKey: "user",
     header: () => <div className="w-50 ml-2">Guest</div>,
     cell: ({ row }) => {
-      const user = row.original.user;
-      const email = row.original.email;
+      const creatorId = row.original.creatorId
+      const patient = row.original.patient
+      const doctor = row.original.doctor
+      const user = creatorId === patient.id ? doctor : patient
 
       return (
         <div className="ml-2">
-          <div>{user}</div>
-          <div className="text-muted-foreground text-sm">{email}</div>
+          <div>{user.name}</div>
+          <div className="text-muted-foreground text-sm">{user.email}</div>
         </div>
       );
     },
@@ -71,8 +74,8 @@ export const columns: ColumnDef<IAppointment>[] = [
       return (
         <div className="flex items-center">
           <AppointmentDetails appointment={row.original} />
-          <EditAppointmentForm appointment={row.original} />
-          <DeleteConfirmation id={row.original.id} />
+          <EditAppointmentForm appointment={row.original} userId={admin.id}/>
+          <DeleteConfirmation id={row.original.id} category="appointment"/>
           <DropdownMenu>
             <DropdownMenuTrigger
               asChild

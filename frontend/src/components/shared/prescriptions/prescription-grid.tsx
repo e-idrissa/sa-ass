@@ -51,7 +51,7 @@ const PrescriptionCard = ({
           {role !== "patient" && (
             <EditPrescriptionFrom prescription={prescription} />
           )}
-          {userId && <DeleteConfirmation id={prescription.id} />}
+          {userId && <DeleteConfirmation id={prescription.id} category="prescription"/>}
         </div>
         <div className="flex flex-col gap-1 items-center">
           <FileTextIcon className="size-16 mb-3 stroke-1" />

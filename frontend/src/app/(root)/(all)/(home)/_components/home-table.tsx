@@ -1,3 +1,4 @@
+import { AppointmentDetails } from "@/components/shared/appointments/appointment-details";
 import { TableBadge } from "@/components/shared/table-badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
@@ -11,7 +12,6 @@ import {
 } from "@/components/ui/table";
 import { homeTableData } from "@/lib/tmp/table-data";
 import { formatDate } from "@/lib/utils";
-import { AppointmentDetails } from "./appointment-details";
 
 interface Props {
   role: string;
@@ -38,7 +38,6 @@ export const Hometable = ({ role }: Props) => {
               <TableHead>Status</TableHead>
               <TableHead className="">Reason</TableHead>
               <TableHead className="">Date</TableHead>
-              {/* <TableHead className="">Updated At</TableHead> */}
               <TableHead />
             </TableRow>
           </TableHeader>
@@ -46,15 +45,14 @@ export const Hometable = ({ role }: Props) => {
             {data.map((row, idx) => (
               <TableRow key={idx}>
                 <TableCell className="flex flex-col ml-2">
-                  <p className="font-medium">{row.user}</p>
-                  <p className="text-xs text-muted-foreground">{row.email}</p>
+                  <p className="font-medium">{row.patient.name}</p>
+                  <p className="text-xs text-muted-foreground">{row.patient.email}</p>
                 </TableCell>
                 <TableCell>
                   <TableBadge variant={row.status} />
                 </TableCell>
                 <TableCell className="align-middle h-full">{row.reason}</TableCell>
                 <TableCell>{formatDate(row.date)}</TableCell>
-                {/* <TableCell>{formatDate(row.updatedAt)}</TableCell> */}
                 <TableCell>
                   <AppointmentDetails appointment={row}/>
                 </TableCell>

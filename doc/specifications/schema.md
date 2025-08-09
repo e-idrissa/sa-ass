@@ -7,7 +7,7 @@ This file defines each database table schema of the app.
 ### Patients Table
 - `id : String`
 - `role : String`
-- `isConfirmed: boolean`
+- `isVerified: boolean`
 - `matricule : Number`
 - `email : String`
 - `password: String`
@@ -24,7 +24,7 @@ This file defines each database table schema of the app.
 ### Doctors Table
 - `id : String`
 - `role : String`
-- `isConfirmed: boolean`
+- `isVerified: boolean`
 - `matricule : Number`
 - `email : String`
 - `password : String`
@@ -55,6 +55,7 @@ This file defines each database table schema of the app.
 
 ### Prescriptions Table
 - `id : Number`
+- `creatorId: String`
 - `doctorId : String`
 - `patientId : String`
 - `drugDosage : DrugDosage[]`
