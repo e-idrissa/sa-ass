@@ -191,7 +191,7 @@ export const homeTableData = [
 export const usersTableData: IUsersTableData[] = [
   {
     id: "1",
-    isConfirmed: true,
+    isVerified: true,
     role: "doctor",
     matricule: 1001,
     email: "john.doe@example.com",
@@ -200,7 +200,7 @@ export const usersTableData: IUsersTableData[] = [
   },
   {
     id: "2",
-    isConfirmed: false,
+    isVerified: false,
     role: "doctor",
     matricule: 1002,
     email: "jane.smith@example.com",
@@ -209,7 +209,7 @@ export const usersTableData: IUsersTableData[] = [
   },
   {
     id: "k3u",
-    isConfirmed: true,
+    isVerified: true,
     role: "patient",
     matricule: 1003,
     email: "robert.johnson@example.com",
@@ -218,7 +218,7 @@ export const usersTableData: IUsersTableData[] = [
   },
   {
     id: "4",
-    isConfirmed: true,
+    isVerified: true,
     role: "patient",
     matricule: 1004,
     email: "emily.davis@example.com",
@@ -227,7 +227,7 @@ export const usersTableData: IUsersTableData[] = [
   },
   {
     id: "5",
-    isConfirmed: false,
+    isVerified: false,
     role: "doctor",
     matricule: 1005,
     email: "michael.wilson@example.com",
@@ -236,7 +236,7 @@ export const usersTableData: IUsersTableData[] = [
   },
   {
     id: "6",
-    isConfirmed: true,
+    isVerified: true,
     role: "doctor",
     matricule: 1006,
     email: "sarah.miller@example.com",
@@ -245,7 +245,7 @@ export const usersTableData: IUsersTableData[] = [
   },
   {
     id: "7",
-    isConfirmed: true,
+    isVerified: true,
     role: "patient",
     matricule: 1007,
     email: "david.moore@example.com",
@@ -254,7 +254,7 @@ export const usersTableData: IUsersTableData[] = [
   },
   {
     id: "8",
-    isConfirmed: false,
+    isVerified: false,
     role: "patient",
     matricule: 1008,
     email: "lisa.taylor@example.com",
@@ -263,7 +263,7 @@ export const usersTableData: IUsersTableData[] = [
   },
   {
     id: "9",
-    isConfirmed: true,
+    isVerified: true,
     role: "doctor",
     matricule: 1009,
     email: "james.anderson@example.com",
@@ -272,7 +272,7 @@ export const usersTableData: IUsersTableData[] = [
   },
   {
     id: "10",
-    isConfirmed: true,
+    isVerified: true,
     role: "patient",
     matricule: 1010,
     email: "jennifer.thomas@example.com",
@@ -284,23 +284,34 @@ export const usersTableData: IUsersTableData[] = [
 export const prescriptionsData: IPrescription[] = [
   {
     id: 1,
-    doctor: "Alexander Dowie",
-    patient: "Mai Lee",
+    patient: {
+      id: "k3u",
+      name: "Adam Smith",
+      email: "adam@consult.com",
+    },
+    doctor: {
+      id: "k2u",
+      name: "Adam Smith",
+      email: "adam@consult.com",
+    },
     drugDosage: [
       {
         id: "00001",
-        drugId: "00001",
+        drug: "00001",
         frequency: "3 x 3",
+        day: 4,
       },
       {
         id: "00002",
-        drugId: "00001",
+        drug: "00001",
         frequency: "3 x 3",
+        day: 4,
       },
       {
         id: "00003",
-        drugId: "00001",
+        drug: "00001",
         frequency: "3 x 3",
+        day: 4,
       },
     ],
     recordUrl: "http://my-storage.com",
@@ -308,23 +319,34 @@ export const prescriptionsData: IPrescription[] = [
   },
   {
     id: 2,
-    doctor: "Alexander Dowie",
-    patient: "Mai Lee",
+    patient: {
+      id: "k3u",
+      name: "Adam Smith",
+      email: "adam@consult.com",
+    },
+    doctor: {
+      id: "k2u",
+      name: "Adam Smith",
+      email: "adam@consult.com",
+    },
     drugDosage: [
       {
         id: "00001",
-        drugId: "00001",
+        drug: "Pracetamol",
         frequency: "3 x 3",
+        day: 4
       },
       {
         id: "00002",
-        drugId: "00001",
+        drug: "Pracetamol",
         frequency: "3 x 3",
+        day: 4
       },
       {
         id: "00003",
-        drugId: "00001",
+        drug: "Pracetamol",
         frequency: "3 x 3",
+        day: 4
       },
     ],
     recordUrl: "http://my-storage.com",
@@ -332,23 +354,34 @@ export const prescriptionsData: IPrescription[] = [
   },
   {
     id: 3,
-    doctor: "Alexander Dowie",
-    patient: "Mai Lee",
+    patient: {
+      id: "k3u",
+      name: "Adam Smith",
+      email: "adam@consult.com",
+    },
+    doctor: {
+      id: "k2u",
+      name: "Adam Smith",
+      email: "adam@consult.com",
+    },
     drugDosage: [
       {
         id: "00001",
-        drugId: "00001",
+        drug: "Pracetamol",
         frequency: "3 x 3",
+        day: 4
       },
       {
         id: "00002",
-        drugId: "00001",
+        drug: "Pracetamol",
         frequency: "3 x 3",
+        day: 4
       },
       {
         id: "00003",
-        drugId: "00001",
+        drug: "Pracetamol",
         frequency: "3 x 3",
+        day: 4
       },
     ],
     recordUrl: "http://my-storage.com",
@@ -356,23 +389,34 @@ export const prescriptionsData: IPrescription[] = [
   },
   {
     id: 4,
-    doctor: "Alexander Dowie",
-    patient: "Mai Lee",
+    patient: {
+      id: "k3u",
+      name: "Adam Smith",
+      email: "adam@consult.com",
+    },
+    doctor: {
+      id: "k2u",
+      name: "Adam Smith",
+      email: "adam@consult.com",
+    },
     drugDosage: [
       {
         id: "00001",
-        drugId: "00001",
+        drug: "Pracetamol",
         frequency: "3 x 3",
+        day: 4
       },
       {
         id: "00002",
-        drugId: "00001",
+        drug: "Pracetamol",
         frequency: "3 x 3",
+        day: 4
       },
       {
         id: "00003",
-        drugId: "00001",
+        drug: "Pracetamol",
         frequency: "3 x 3",
+        day: 4
       },
     ],
     recordUrl: "http://my-storage.com",
@@ -380,23 +424,34 @@ export const prescriptionsData: IPrescription[] = [
   },
   {
     id: 5,
-    doctor: "Alexander Dowie",
-    patient: "Mai Lee",
+    patient: {
+      id: "k3u",
+      name: "Adam Smith",
+      email: "adam@consult.com",
+    },
+    doctor: {
+      id: "k2u",
+      name: "Adam Smith",
+      email: "adam@consult.com",
+    },
     drugDosage: [
       {
         id: "00001",
-        drugId: "00001",
+        drug: "Pracetamol",
         frequency: "3 x 3",
+        day: 4
       },
       {
         id: "00002",
-        drugId: "00001",
+        drug: "Pracetamol",
         frequency: "3 x 3",
+        day: 4
       },
       {
         id: "00003",
-        drugId: "00001",
+        drug: "Pracetamol",
         frequency: "3 x 3",
+        day: 4
       },
     ],
     recordUrl: "http://my-storage.com",
@@ -404,23 +459,34 @@ export const prescriptionsData: IPrescription[] = [
   },
   {
     id: 6,
-    doctor: "Alexander Dowie",
-    patient: "Mai Lee",
+    patient: {
+      id: "k3u",
+      name: "Adam Smith",
+      email: "adam@consult.com",
+    },
+    doctor: {
+      id: "k2u",
+      name: "Adam Smith",
+      email: "adam@consult.com",
+    },
     drugDosage: [
       {
         id: "00001",
-        drugId: "00001",
+        drug: "Pracetamol",
         frequency: "3 x 3",
+        day: 4
       },
       {
         id: "00002",
-        drugId: "00001",
+        drug: "Pracetamol",
         frequency: "3 x 3",
+        day: 4
       },
       {
         id: "00003",
-        drugId: "00001",
+        drug: "Pracetamol",
         frequency: "3 x 3",
+        day: 4
       },
     ],
     recordUrl: "http://my-storage.com",
@@ -428,23 +494,34 @@ export const prescriptionsData: IPrescription[] = [
   },
   {
     id: 7,
-    doctor: "Alexander Dowie",
-    patient: "Mai Lee",
+    patient: {
+      id: "k3u",
+      name: "Adam Smith",
+      email: "adam@consult.com",
+    },
+    doctor: {
+      id: "k2u",
+      name: "Adam Smith",
+      email: "adam@consult.com",
+    },
     drugDosage: [
       {
         id: "00001",
-        drugId: "00001",
+        drug: "Pracetamol",
         frequency: "3 x 3",
+        day: 4
       },
       {
         id: "00002",
-        drugId: "00001",
+        drug: "Pracetamol",
         frequency: "3 x 3",
+        day: 4
       },
       {
         id: "00003",
-        drugId: "00001",
+        drug: "Pracetamol",
         frequency: "3 x 3",
+        day: 4
       },
     ],
     recordUrl: "http://my-storage.com",
@@ -452,23 +529,34 @@ export const prescriptionsData: IPrescription[] = [
   },
   {
     id: 8,
-    doctor: "Alexander Dowie",
-    patient: "Mai Lee",
+    patient: {
+      id: "k3u",
+      name: "Adam Smith",
+      email: "adam@consult.com",
+    },
+    doctor: {
+      id: "k2u",
+      name: "Adam Smith",
+      email: "adam@consult.com",
+    },
     drugDosage: [
       {
         id: "00001",
-        drugId: "00001",
+        drug: "Pracetamol",
         frequency: "3 x 3",
+        day: 4
       },
       {
         id: "00002",
-        drugId: "00001",
+        drug: "Pracetamol",
         frequency: "3 x 3",
+        day: 4
       },
       {
         id: "00003",
-        drugId: "00001",
+        drug: "Pracetamol",
         frequency: "3 x 3",
+        day: 4
       },
     ],
     recordUrl: "http://my-storage.com",
@@ -476,23 +564,34 @@ export const prescriptionsData: IPrescription[] = [
   },
   {
     id: 9,
-    doctor: "Alexander Dowie",
-    patient: "Mai Lee",
+    patient: {
+      id: "k3u",
+      name: "Adam Smith",
+      email: "adam@consult.com",
+    },
+    doctor: {
+      id: "k2u",
+      name: "Adam Smith",
+      email: "adam@consult.com",
+    },
     drugDosage: [
       {
         id: "00001",
-        drugId: "00001",
+        drug: "Pracetamol",
         frequency: "3 x 3",
+        day: 4
       },
       {
         id: "00002",
-        drugId: "00001",
+        drug: "Pracetamol",
         frequency: "3 x 3",
+        day: 4
       },
       {
         id: "00003",
-        drugId: "00001",
+        drug: "Pracetamol",
         frequency: "3 x 3",
+        day: 4
       },
     ],
     recordUrl: "http://my-storage.com",
@@ -500,23 +599,34 @@ export const prescriptionsData: IPrescription[] = [
   },
   {
     id: 10,
-    doctor: "Alexander Dowie",
-    patient: "Mai Lee",
+    patient: {
+      id: "k3u",
+      name: "Adam Smith",
+      email: "adam@consult.com",
+    },
+    doctor: {
+      id: "k2u",
+      name: "Adam Smith",
+      email: "adam@consult.com",
+    },
     drugDosage: [
       {
         id: "00001",
-        drugId: "00001",
+        drug: "Pracetamol",
         frequency: "3 x 3",
+        day: 4
       },
       {
         id: "00002",
-        drugId: "00001",
+        drug: "Pracetamol",
         frequency: "3 x 3",
+        day: 4
       },
       {
         id: "00003",
-        drugId: "00001",
+        drug: "Pracetamol",
         frequency: "3 x 3",
+        day: 4
       },
     ],
     recordUrl: "http://my-storage.com",
@@ -524,23 +634,34 @@ export const prescriptionsData: IPrescription[] = [
   },
   {
     id: 11,
-    doctor: "Alexander Dowie",
-    patient: "Mai Lee",
+    patient: {
+      id: "k3u",
+      name: "Adam Smith",
+      email: "adam@consult.com",
+    },
+    doctor: {
+      id: "k2u",
+      name: "Adam Smith",
+      email: "adam@consult.com",
+    },
     drugDosage: [
       {
         id: "00001",
-        drugId: "00001",
+        drug: "Pracetamol",
         frequency: "3 x 3",
+        day: 4
       },
       {
         id: "00002",
-        drugId: "00001",
+        drug: "Pracetamol",
         frequency: "3 x 3",
+        day: 4
       },
       {
         id: "00003",
-        drugId: "00001",
+        drug: "Pracetamol",
         frequency: "3 x 3",
+        day: 4
       },
     ],
     recordUrl: "http://my-storage.com",
@@ -548,23 +669,34 @@ export const prescriptionsData: IPrescription[] = [
   },
   {
     id: 12,
-    doctor: "Alexander Dowie",
-    patient: "Mai Lee",
+    patient: {
+      id: "k3u",
+      name: "Adam Smith",
+      email: "adam@consult.com",
+    },
+    doctor: {
+      id: "k2u",
+      name: "Adam Smith",
+      email: "adam@consult.com",
+    },
     drugDosage: [
       {
         id: "00001",
-        drugId: "00001",
+        drug: "Pracetamol",
         frequency: "3 x 3",
+        day: 4
       },
       {
         id: "00002",
-        drugId: "00001",
+        drug: "Pracetamol",
         frequency: "3 x 3",
+        day: 4
       },
       {
         id: "00003",
-        drugId: "00001",
+        drug: "Pracetamol",
         frequency: "3 x 3",
+        day: 4
       },
     ],
     recordUrl: "http://my-storage.com",
@@ -573,23 +705,34 @@ export const prescriptionsData: IPrescription[] = [
   ,
   {
     id: 13,
-    doctor: "Alexander Dowie",
-    patient: "Mai Lee",
+    patient: {
+      id: "k3u",
+      name: "Adam Smith",
+      email: "adam@consult.com",
+    },
+    doctor: {
+      id: "k2u",
+      name: "Adam Smith",
+      email: "adam@consult.com",
+    },
     drugDosage: [
       {
         id: "00001",
-        drugId: "00001",
+        drug: "Pracetamol",
         frequency: "3 x 3",
+        day: 4
       },
       {
         id: "00002",
-        drugId: "00001",
+        drug: "Pracetamol",
         frequency: "3 x 3",
+        day: 4
       },
       {
         id: "00003",
-        drugId: "00001",
+        drug: "Pracetamol",
         frequency: "3 x 3",
+        day: 4
       },
     ],
     recordUrl: "http://my-storage.com",
@@ -598,23 +741,34 @@ export const prescriptionsData: IPrescription[] = [
   ,
   {
     id: 14,
-    doctor: "Alexander Dowie",
-    patient: "Mai Lee",
+    patient: {
+      id: "k3u",
+      name: "Adam Smith",
+      email: "adam@consult.com",
+    },
+    doctor: {
+      id: "k2u",
+      name: "Adam Smith",
+      email: "adam@consult.com",
+    },
     drugDosage: [
       {
         id: "00001",
-        drugId: "00001",
+        drug: "Pracetamol",
         frequency: "3 x 3",
+        day: 4
       },
       {
         id: "00002",
-        drugId: "00001",
+        drug: "Pracetamol",
         frequency: "3 x 3",
+        day: 4
       },
       {
         id: "00003",
-        drugId: "00001",
+        drug: "Pracetamol",
         frequency: "3 x 3",
+        day: 4
       },
     ],
     recordUrl: "http://my-storage.com",
@@ -623,23 +777,34 @@ export const prescriptionsData: IPrescription[] = [
   ,
   {
     id: 15,
-    doctor: "Alexander Dowie",
-    patient: "Mai Lee",
+    patient: {
+      id: "k3u",
+      name: "Adam Smith",
+      email: "adam@consult.com",
+    },
+    doctor: {
+      id: "k2u",
+      name: "Adam Smith",
+      email: "adam@consult.com",
+    },
     drugDosage: [
       {
         id: "00001",
-        drugId: "00001",
+        drug: "Pracetamol",
         frequency: "3 x 3",
+        day: 4
       },
       {
         id: "00002",
-        drugId: "00001",
+        drug: "Pracetamol",
         frequency: "3 x 3",
+        day: 4
       },
       {
         id: "00003",
-        drugId: "00001",
+        drug: "Pracetamol",
         frequency: "3 x 3",
+        day: 4
       },
     ],
     recordUrl: "http://my-storage.com",
@@ -648,23 +813,34 @@ export const prescriptionsData: IPrescription[] = [
   ,
   {
     id: 16,
-    doctor: "Alexander Dowie",
-    patient: "Mai Lee",
+    patient: {
+      id: "k3u",
+      name: "Adam Smith",
+      email: "adam@consult.com",
+    },
+    doctor: {
+      id: "k2u",
+      name: "Adam Smith",
+      email: "adam@consult.com",
+    },
     drugDosage: [
       {
         id: "00001",
-        drugId: "00001",
+        drug: "Pracetamol",
         frequency: "3 x 3",
+        day: 4
       },
       {
         id: "00002",
-        drugId: "00001",
+        drug: "Pracetamol",
         frequency: "3 x 3",
+        day: 4
       },
       {
         id: "00003",
-        drugId: "00001",
+        drug: "Pracetamol",
         frequency: "3 x 3",
+        day: 4
       },
     ],
     recordUrl: "http://my-storage.com",
@@ -673,23 +849,34 @@ export const prescriptionsData: IPrescription[] = [
   ,
   {
     id: 17,
-    doctor: "Alexander Dowie",
-    patient: "Mai Lee",
+    patient: {
+      id: "k3u",
+      name: "Adam Smith",
+      email: "adam@consult.com",
+    },
+    doctor: {
+      id: "k2u",
+      name: "Adam Smith",
+      email: "adam@consult.com",
+    },
     drugDosage: [
       {
         id: "00001",
-        drugId: "00001",
+        drug: "Pracetamol",
         frequency: "3 x 3",
+        day: 4
       },
       {
         id: "00002",
-        drugId: "00001",
+        drug: "Pracetamol",
         frequency: "3 x 3",
+        day: 4
       },
       {
         id: "00003",
-        drugId: "00001",
+        drug: "Pracetamol",
         frequency: "3 x 3",
+        day: 4
       },
     ],
     recordUrl: "http://my-storage.com",
@@ -698,23 +885,34 @@ export const prescriptionsData: IPrescription[] = [
   ,
   {
     id: 18,
-    doctor: "Alexander Dowie",
-    patient: "Mai Lee",
+    patient: {
+      id: "k3u",
+      name: "Adam Smith",
+      email: "adam@consult.com",
+    },
+    doctor: {
+      id: "k2u",
+      name: "Adam Smith",
+      email: "adam@consult.com",
+    },
     drugDosage: [
       {
         id: "00001",
-        drugId: "00001",
+        drug: "Pracetamol",
         frequency: "3 x 3",
+        day: 4
       },
       {
         id: "00002",
-        drugId: "00001",
+        drug: "Pracetamol",
         frequency: "3 x 3",
+        day: 4
       },
       {
         id: "00003",
-        drugId: "00001",
+        drug: "Pracetamol",
         frequency: "3 x 3",
+        day: 4
       },
     ],
     recordUrl: "http://my-storage.com",
@@ -722,23 +920,34 @@ export const prescriptionsData: IPrescription[] = [
   },
   {
     id: 19,
-    doctor: "Alexander Dowie",
-    patient: "Mai Lee",
+    patient: {
+      id: "k3u",
+      name: "Adam Smith",
+      email: "adam@consult.com",
+    },
+    doctor: {
+      id: "k2u",
+      name: "Adam Smith",
+      email: "adam@consult.com",
+    },
     drugDosage: [
       {
         id: "00001",
-        drugId: "00001",
+        drug: "Pracetamol",
         frequency: "3 x 3",
+        day: 4
       },
       {
         id: "00002",
-        drugId: "00001",
+        drug: "Pracetamol",
         frequency: "3 x 3",
+        day: 4
       },
       {
         id: "00003",
-        drugId: "00001",
+        drug: "Pracetamol",
         frequency: "3 x 3",
+        day: 4
       },
     ],
     recordUrl: "http://my-storage.com",
@@ -746,23 +955,34 @@ export const prescriptionsData: IPrescription[] = [
   },
   {
     id: 20,
-    doctor: "Alexander Dowie",
-    patient: "Mai Lee",
+    patient: {
+      id: "k3u",
+      name: "Adam Smith",
+      email: "adam@consult.com",
+    },
+    doctor: {
+      id: "k2u",
+      name: "Adam Smith",
+      email: "adam@consult.com",
+    },
     drugDosage: [
       {
         id: "00001",
-        drugId: "00001",
+        drug: "Pracetamol",
         frequency: "3 x 3",
+        day: 4
       },
       {
         id: "00002",
-        drugId: "00001",
+        drug: "Pracetamol",
         frequency: "3 x 3",
+        day: 4
       },
       {
         id: "00003",
-        drugId: "00001",
+        drug: "Pracetamol",
         frequency: "3 x 3",
+        day: 4
       },
     ],
     recordUrl: "http://my-storage.com",

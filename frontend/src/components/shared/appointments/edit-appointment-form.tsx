@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
@@ -47,6 +49,7 @@ import { cn, formatDate } from "@/lib/utils";
 import { Calendar } from "@/components/ui/calendar";
 import { useState } from "react";
 import { Textarea } from "@/components/ui/textarea";
+import { AppLogo } from "../app-logo";
 
 interface Props {
   appointment: IAppointment;
@@ -55,7 +58,7 @@ interface Props {
 
 const FormSchema = z.object({
   creatorId: z.string().min(2, {
-    message: "Patient is is required",
+    message: "Creator is is required",
   }),
   patientId: z.string().min(2, {
     message: "Patient is is required",
@@ -104,6 +107,7 @@ export function EditAppointmentForm({ appointment, userId }: Props) {
       </SheetTrigger>
       <SheetContent>
         <SheetHeader>
+          <AppLogo />
           <SheetTitle>Edit Appointment</SheetTitle>
           <SheetDescription>
             Make changes to your appoointment here. Click save when you&apos;re
@@ -111,7 +115,10 @@ export function EditAppointmentForm({ appointment, userId }: Props) {
           </SheetDescription>
         </SheetHeader>
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="flex flex-col h-full justify-between">
+          <form
+            onSubmit={form.handleSubmit(onSubmit)}
+            className="flex flex-col h-full justify-between"
+          >
             <div className="px-4 space-y-4">
               <FormField
                 control={form.control}

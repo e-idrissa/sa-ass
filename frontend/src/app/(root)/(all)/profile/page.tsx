@@ -16,6 +16,7 @@ import PasswordDrawer from "./_components/password-drawer";
 import { PrescriptionGrid } from "@/components/shared/prescriptions/prescription-grid";
 import { homeTableData, prescriptionsData } from "@/lib/tmp/table-data";
 import { WeekAppointments } from "./_components/week-appointments";
+import { EditUser } from "@/components/shared/edit-user-sheet";
 
 const ProfilePage = () => {
   const user = sampleUser;
@@ -24,7 +25,10 @@ const ProfilePage = () => {
   return (
     <div className="flex gap-8 items-center py-8">
       <div className="flex flex-col items-center gap-8 w-2/5">
-        <UserRoundIcon className="size-30 rounded-full stroke-1 p-6 bg-sidebar" />
+        <div className="relative size-30">
+          <UserRoundIcon className="size-30 rounded-full stroke-1 p-6 bg-sidebar" />
+          <EditUser user={sampleUser} onProfile={true} className="absolute -right-2 bottom-2" />
+        </div>
         <div className="flex items-center gap-2">
           <Badge variant={"secondary"} className="capitalize">
             {user.role}
@@ -86,7 +90,6 @@ const ProfilePage = () => {
       </div>
       <div className="flex gap-8 w-3/5">
         <PrescriptionGrid
-          role={sampleUser.role}
           userId={sampleUser.id}
           prescriptions={prescriptions}
           page="profile"

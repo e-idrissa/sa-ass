@@ -5,7 +5,8 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import {
   CalendarIcon,
-  ChevronDownIcon,
+  CheckIcon,
+  ChevronsUpDownIcon,
   CircleCheckIcon,
   CircleXIcon,
   ClockIcon,
@@ -22,12 +23,13 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
+  Command,
+  CommandEmpty,
+  CommandGroup,
+  CommandInput,
+  CommandItem,
+  CommandList,
+} from "@/components/ui/command";
 import {
   Popover,
   PopoverContent,
@@ -100,9 +102,9 @@ export const NewAppointmentForm = ({
   return (
     <Card>
       <CardHeader>
-        <CardTitle>New User</CardTitle>
+        <CardTitle>New Appointment</CardTitle>
         <CardDescription>
-          Lorem ipsum dolor sit amet, consectetur adipisicing
+          Enter your appointment details here. Click save when you&apos;re done.
         </CardDescription>
       </CardHeader>
       <CardContent>
@@ -121,30 +123,66 @@ export const NewAppointmentForm = ({
         )}
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-            {role === "patient" ? (
+            {role === "admin" || role === "doctor" ? (
               <FormField
                 control={form.control}
-                name={"doctorId"}
+                name="patientId"
                 render={({ field }) => (
-                  <FormItem>
+                  <FormItem className="flex flex-col">
                     <FormLabel>Patient</FormLabel>
-                    <Select
-                      onValueChange={field.onChange}
-                      defaultValue={field.value}
-                    >
-                      <FormControl>
-                        <SelectTrigger className="w-full">
-                          <SelectValue placeholder="Select a doctor" />
-                        </SelectTrigger>
-                      </FormControl>
-                      <SelectContent>
-                        {doctors.map((d) => (
-                          <SelectItem key={d.id} value={d.id}>
-                            {d.user}
-                          </SelectItem>
-                        ))}
-                      </SelectContent>
-                    </Select>
+                    <Popover>
+                      <PopoverTrigger asChild>
+                        <FormControl>
+                          <Button
+                            variant={"outline"}
+                            role="combobox"
+                            className={cn(
+                              "justify-between",
+                              !field.value && "text-muted-foreground"
+                            )}
+                          >
+                            {field.value
+                              ? patients.find(
+                                  (patient) => patient.id === field.value
+                                )?.user
+                              : "Select a patient"}
+                            <ChevronsUpDownIcon className="opacity-50" />
+                          </Button>
+                        </FormControl>
+                      </PopoverTrigger>
+                      <PopoverContent className="w-100 p-0">
+                        <Command>
+                          <CommandInput
+                            placeholder="Search a patient"
+                            className="h-9"
+                          />
+                          <CommandList>
+                            <CommandEmpty>No patients found.</CommandEmpty>
+                            <CommandGroup>
+                              {patients.map((p) => (
+                                <CommandItem
+                                  key={p.id}
+                                  value={p.user}
+                                  onSelect={() => {
+                                    form.setValue("patientId", p.id);
+                                  }}
+                                >
+                                  {p.user}
+                                  <CheckIcon
+                                    className={cn(
+                                      "ml-auto",
+                                      p.id === field.value
+                                        ? "opacity-100"
+                                        : "opacity-0"
+                                    )}
+                                  />
+                                </CommandItem>
+                              ))}
+                            </CommandGroup>
+                          </CommandList>
+                        </Command>
+                      </PopoverContent>
+                    </Popover>
                     <FormMessage />
                   </FormItem>
                 )}
@@ -152,27 +190,63 @@ export const NewAppointmentForm = ({
             ) : (
               <FormField
                 control={form.control}
-                name={"patientId"}
+                name="doctorId"
                 render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Patient</FormLabel>
-                    <Select
-                      onValueChange={field.onChange}
-                      defaultValue={field.value}
-                    >
-                      <FormControl>
-                        <SelectTrigger className="w-full">
-                          <SelectValue placeholder="Select a patient" />
-                        </SelectTrigger>
-                      </FormControl>
-                      <SelectContent>
-                        {patients.map((p) => (
-                          <SelectItem key={p.id} value={p.id}>
-                            {p.user}
-                          </SelectItem>
-                        ))}
-                      </SelectContent>
-                    </Select>
+                  <FormItem className="flex flex-col">
+                    <FormLabel>Doctor</FormLabel>
+                    <Popover>
+                      <PopoverTrigger asChild>
+                        <FormControl>
+                          <Button
+                            variant={"outline"}
+                            role="combobox"
+                            className={cn(
+                              "justify-between",
+                              !field.value && "text-muted-foreground"
+                            )}
+                          >
+                            {field.value
+                              ? doctors.find(
+                                  (doctor) => doctor.id === field.value
+                                )?.user
+                              : "Select a doctor"}
+                            <ChevronsUpDownIcon className="opacity-50" />
+                          </Button>
+                        </FormControl>
+                      </PopoverTrigger>
+                      <PopoverContent className="w-100 p-0">
+                        <Command>
+                          <CommandInput
+                            placeholder="Search a doctor"
+                            className="h-9"
+                          />
+                          <CommandList>
+                            <CommandEmpty>No doctors found.</CommandEmpty>
+                            <CommandGroup>
+                              {doctors.map((d) => (
+                                <CommandItem
+                                  key={d.id}
+                                  value={d.user}
+                                  onSelect={() => {
+                                    form.setValue("doctorId", d.id);
+                                  }}
+                                >
+                                  {d.user}
+                                  <CheckIcon
+                                    className={cn(
+                                      "ml-auto",
+                                      d.id === field.value
+                                        ? "opacity-100"
+                                        : "opacity-0"
+                                    )}
+                                  />
+                                </CommandItem>
+                              ))}
+                            </CommandGroup>
+                          </CommandList>
+                        </Command>
+                      </PopoverContent>
+                    </Popover>
                     <FormMessage />
                   </FormItem>
                 )}
@@ -250,7 +324,6 @@ export const NewAppointmentForm = ({
                 </FormItem>
               )}
             />
-
             <Button
               type="submit"
               size="sm"

@@ -58,14 +58,23 @@ type IDrug = {
 
 type IDrugDosage = {
   id: string;
-  drugId: string;
+  drug: string;
   frequency: string;
+  day: number
 };
 
 type IPrescription = {
   id: number;
-  doctor: string;
-  patient: string;
+  doctor: {
+    id: string,
+    name: string,
+    email: string
+  };
+  patient: {
+    id: string,
+    name: string,
+    email: string
+  };
   drugDosage: IDrugDosage[];
   recordUrl?: string;
   createdAt: Date;

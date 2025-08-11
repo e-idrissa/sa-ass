@@ -1,6 +1,5 @@
 "use client";
 
-// import { parseDate } from "chrono-node";
 import {
   Card,
   CardContent,
@@ -8,50 +7,37 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Dispatch, SetStateAction, useState } from "react";
 import { PrescriptionDetails } from "./prescription-details";
-import { EditPrescriptionFrom } from "./edit-prescription-form";
 import { DeleteConfirmation } from "../delete-confimation";
 import { FileTextIcon } from "lucide-react";
 import { Filter } from "./filter";
 import { cn, formatDate } from "@/lib/utils";
 import { ScrollArea } from "@/components/ui/scroll-area";
+import { useState } from "react";
 
 interface Props {
   userId: string;
-  role: string;
   prescriptions: IPrescription[];
   page?: string;
 }
 
 interface CardProps {
   userId: string;
-  role: string;
   prescription: IPrescription;
-  isOpen: boolean;
-  setIsOpen: Dispatch<SetStateAction<boolean>>;
 }
 
 const PrescriptionCard = ({
   prescription,
-  isOpen,
-  setIsOpen,
-  role,
   userId,
 }: CardProps) => {
   return (
     <Card className="relative group border-none hover:border-card h-44">
       <CardContent className="">
         <div className="absolute top-0 left-0 inset-0 w-full h-full hidden group-hover:flex rounded-xl items-center justify-center bg-accent/80">
-          <PrescriptionDetails
-            prescription={prescription}
-            isOpen={isOpen}
-            setIsOpen={setIsOpen}
-          />
-          {role !== "patient" && (
-            <EditPrescriptionFrom prescription={prescription} />
+          <PrescriptionDetails prescription={prescription} />
+          {userId && (
+            <DeleteConfirmation id={prescription.id} category="prescription" />
           )}
-          {userId && <DeleteConfirmation id={prescription.id} category="prescription"/>}
         </div>
         <div className="flex flex-col gap-1 items-center">
           <FileTextIcon className="size-16 mb-3 stroke-1" />
@@ -67,13 +53,7 @@ const PrescriptionCard = ({
   );
 };
 
-export const PrescriptionGrid = ({
-  userId,
-  role,
-  prescriptions,
-  page,
-}: Props) => {
-  const [isOpen, setIsOpen] = useState<boolean>(false);
+export const PrescriptionGrid = ({ userId, prescriptions, page }: Props) => {
   const [date, setDate] = useState<Date | undefined>(undefined);
 
   const data = date
@@ -103,18 +83,18 @@ export const PrescriptionGrid = ({
           className={cn(
             "size-full grid gap-8",
             page === "admin/analytics" ? "max-h-120" : "max-h-170",
-            page === "admin/prescriptions" ? "grid-cols-8" : 
-            page === "profile" ? "grid-cols-5" : "grid-cols-6"
+            page === "admin/prescriptions"
+              ? "grid-cols-8"
+              : page === "profile"
+              ? "grid-cols-5"
+              : "grid-cols-6"
           )}
         >
           {data.map((p) => (
             <PrescriptionCard
               key={p.id}
               prescription={p}
-              isOpen={isOpen}
-              setIsOpen={setIsOpen}
               userId={userId}
-              role={role}
             />
           ))}
         </CardContent>

@@ -7,7 +7,7 @@ import { ScanBarcodeIcon } from "lucide-react";
 import { UserDetails } from "../user-details";
 import { sampleUser } from "@/lib/tmp/user";
 import { DeleteConfirmation } from "../../../../../../components/shared/delete-confimation";
-import { EditUserForm } from "../edit-user-form";
+import { EditUser } from "../../../../../../components/shared/edit-user-sheet";
 
 export const columns: ColumnDef<IUsersTableData>[] = [
   {
@@ -44,11 +44,13 @@ export const columns: ColumnDef<IUsersTableData>[] = [
     header: () => <div className="w-24">Role</div>,
     cell: ({ row }) => {
       const role = row.original.role;
-      const variant = role === "doctor" ? "default" : "secondary"
+      const variant = role === "doctor" ? "default" : "secondary";
 
       return (
         <div className="">
-          <Badge variant={variant} className="capitalize">{role}</Badge>
+          <Badge variant={variant} className="capitalize">
+            {role}
+          </Badge>
         </div>
       );
     },
@@ -57,7 +59,7 @@ export const columns: ColumnDef<IUsersTableData>[] = [
     accessorKey: "isConfirmed",
     header: () => <div className="w-36">Status</div>,
     cell: ({ row }) => {
-      const isConfirmed = row.original.isConfirmed;
+      const isConfirmed = row.original.isVerified;
       const variant = isConfirmed ? "confirmed" : "pending";
 
       return (
@@ -85,8 +87,8 @@ export const columns: ColumnDef<IUsersTableData>[] = [
       return (
         <div className="flex items-center">
           <UserDetails user={user} />
-          <EditUserForm user={user} />
-          <DeleteConfirmation id={row.original.id} category="user"/>
+          <EditUser user={sampleUser} />
+          <DeleteConfirmation id={row.original.id} category="user" />
         </div>
       );
     },
