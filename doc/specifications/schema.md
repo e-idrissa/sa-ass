@@ -9,9 +9,9 @@ This file defines each database table schema of the app.
 - `id: String`
 - `role: String`
 - `isVerified: boolean`
-- `matricule: Number`
+- `matricule: String`
 - `email: String`
-- `password: String`
+- `hashPassword: String`
 - `firstName: String`
 - `lastName: String`
 - `dateOfBirth: Date`
@@ -27,9 +27,9 @@ This file defines each database table schema of the app.
 - `id: String`
 - `role: String`
 - `isVerified: boolean`
-- `matricule: Number`
+- `matricule: String`
 - `email: String`
-- `password: String`
+- `hashPassword: String`
 - `firstName: String`
 - `lastName: String`
 - `dateOfBirth: Date`

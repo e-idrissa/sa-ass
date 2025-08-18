@@ -1,3 +1,12 @@
+type IToken = {
+  sub: string;
+  email: string;
+  role: string;
+  type: string;
+  iat: number;
+  exp: number;
+}
+
 type IUser = {
   role: string;
   firstName: string;
