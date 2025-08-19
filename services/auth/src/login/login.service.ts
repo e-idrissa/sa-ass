@@ -1,26 +1,62 @@
 import { Injectable } from '@nestjs/common';
-import { CreateLoginDto } from './dto/create-login.dto';
-import { UpdateLoginDto } from './dto/update-login.dto';
+import { JwtService } from '@nestjs/jwt';
+import { CredentialsDto } from 'src/common/dto/credentials.dto';
+import { UserResponseDto } from 'src/common/dto/users.dto';
+import { UsersService } from 'src/users/users.service';
 
 @Injectable()
 export class LoginService {
-  create(createLoginDto: CreateLoginDto) {
-    return 'This action adds a new login';
+  constructor(
+    private readonly usersService: UsersService,
+    private readonly jwtService: JwtService,
+  ) {}
+
+  async validateUser(credentials: CredentialsDto): Promise<UserResponseDto> {
+    console.log('validateUser called with:', credentials);
+    console.log('credentials type:', typeof credentials);
+    console.log('credentials.email:', credentials?.email);
+    const res = await this.usersService.findOneByEmail(credentials.email);
+    return res;
   }
 
-  findAll() {
-    return `This action returns all login`;
-  }
+  async authenticateUser(credentials: CredentialsDto) {
+    const res = await this.validateUser(credentials);
+    if (res.code === 404) {
+      return {
+        code: 404,
+        message: 'User not found',
+        result: null,
+      };
+    }
 
-  findOne(id: number) {
-    return `This action returns a #${id} login`;
-  }
+    if (res.code === 401) {
+      return {
+        code: 401,
+        message: 'Invalid password',
+        result: null,
+      };
+    }
 
-  update(id: number, updateLoginDto: UpdateLoginDto) {
-    return `This action updates a #${id} login`;
-  }
+    // Generate JWT payload
+    const payload = {
+      sub: res.result?.sub,
+      email: res.result?.email,
+      role: res.result?.role,
+    };
 
-  remove(id: number) {
-    return `This action removes a #${id} login`;
+    // Generate JWT token
+    const accessToken = await this.jwtService.signAsync(payload);
+
+    return {
+      code: 200,
+      message: 'User authenticated successfully',
+      result: {
+        sub: res.result?.sub,
+        role: res.result?.role,
+        email: res.result?.email,
+        accessToken,
+        type: 'auth',
+      },
+    };
   }
 }

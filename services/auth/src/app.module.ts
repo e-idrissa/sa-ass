@@ -1,14 +1,30 @@
-import { Module } from '@nestjs/common';
+import { Module, ValidationPipe } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { ConfigModule } from '@nestjs/config';
 import { LoginModule } from './login/login.module';
-import { LogoutModule } from './logout/logout.module';
 import { VerifyModule } from './verify/verify.module';
-import { PasswordModule } from './password/password.module';
+import { UsersModule } from './users/users.module';
+import { JwtConfigModule } from './jwt/jwt.module';
+import { APP_PIPE } from '@nestjs/core';
 
 @Module({
-  imports: [LoginModule, LogoutModule, VerifyModule, PasswordModule],
+  imports: [
+    ConfigModule.forRoot({
+      isGlobal: true,
+    }),
+    JwtConfigModule,
+    LoginModule,
+    VerifyModule,
+    UsersModule,
+  ],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [
+    AppService,
+    {
+      provide: APP_PIPE,
+      useClass: ValidationPipe,
+    },
+  ],
 })
 export class AppModule {}

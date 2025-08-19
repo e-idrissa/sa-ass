@@ -124,25 +124,24 @@ export class UsersService {
   }
 
   async findByEmail(email: string) {
-    try {
-      const user = await this.userModel
-        .findOne({ email })
-        .select('-passwordHash')
-        .exec();
+    const user = await this.userModel.findOne({ email }).exec();
+    if (!user) {
       return {
-        code: 200,
-        message: 'User fetched successfully',
-        result: user,
-      };
-    } catch (error) {
-      console.log('USER FETCHING ERROR', error);
-
-      return {
-        code: 500,
-        message: 'Failed to fetch user',
+        code: 404,
+        message: 'User not found',
         result: null,
       };
     }
+    return {
+      code: 200,
+      message: 'User fetched successfully',
+      result: {
+        sub: user._id,
+        role: user.role,
+        email: user.email,
+        passwordHash: user.passwordHash,
+      },
+    };
   }
 
   async update(id: string, updateUserDto: UpdateUserDto) {

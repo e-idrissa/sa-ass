@@ -5,10 +5,6 @@ import { ConfigModule } from '@nestjs/config';
 import { DatabaseModule } from './common/config/database.module';
 import { AdminSeeder } from './common/config/seed.module';
 
-const uri = process.env.DB_URI || '';
-
-console.log('MONGO URI:', uri);
-
 @Module({
   imports: [
     ConfigModule.forRoot({
