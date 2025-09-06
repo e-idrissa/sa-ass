@@ -35,9 +35,6 @@ const AnalyticsPage = () => {
     <div className="flex flex-col gap-8 pb-8">
       <PageHeader title={"Analytics"} />
       <Card className="bg-transparent">
-        <CardHeader>
-          <CardTitle className="text-xl font-medium">Analytics</CardTitle>
-        </CardHeader>
         <CardContent className="flex gap-8 w-full">
           <UsersChart data={users} />
           <AppointmentsChart data={appointments} />

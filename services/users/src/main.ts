@@ -5,6 +5,14 @@ import { AdminSeeder } from './common/config/seed.module';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
+
+  app.enableCors({
+    origin: ['http://localhost:3000'],
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
+    credentials: true,
+    allowedHeaders: 'Content-Type, Accept, Authorization',
+  });
+
   await app.listen(process.env.PORT ?? 4002);
 
   // Get the AdminSeeder service instance

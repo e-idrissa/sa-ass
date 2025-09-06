@@ -99,3 +99,10 @@ type IWeekAppointments = {
   day: string
   count: number
 }
+
+// API Error Response
+type ApiError = {
+  message: string;
+  error?: string;
+  statusCode: number;
+};

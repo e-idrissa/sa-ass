@@ -13,7 +13,7 @@ export default function LoginPage() {
           <LoginForm />
         </CardContent>
       </Card>
-      <div className="text-muted-foreground text-sm">
+      <div className="text-muted-foreground text-sm text-center w-90">
         By clicking continue, you agree to our{" "}
         <Link href={"#"} className="underline">
           Terms of Service

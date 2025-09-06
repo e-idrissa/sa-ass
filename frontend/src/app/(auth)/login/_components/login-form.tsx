@@ -4,7 +4,9 @@ import { useState } from "react";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { ControllerRenderProps, useForm } from "react-hook-form";
-import { Eye, EyeClosed, Loader2 } from "lucide-react";
+import { Eye, EyeClosed, Loader2, CircleXIcon } from "lucide-react";
+import { useRouter } from "next/navigation";
+import { useAuth } from "@/providers";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -18,6 +20,9 @@ import {
 import { Input } from "@/components/ui/input";
 import Link from "next/link";
 import { PasswordStrength } from "@/components/shared/password-strength";
+import { useLogin } from "@/hooks/auth";
+import { getErrorMessage } from "@/api/types/errors";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 
 type PasswordFieldProps = {
   field: ControllerRenderProps<
@@ -76,6 +81,11 @@ const FormSchema = z.object({
 });
 
 export const LoginForm = () => {
+  const [error, setError] = useState<string | null>(null);
+  const router = useRouter();
+  const { login } = useAuth();
+  const loginMutation = useLogin();
+  
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
@@ -84,10 +94,39 @@ export const LoginForm = () => {
     },
   });
 
-  const { isValid, isSubmitting } = form.formState;
+  const { isValid } = form.formState;
+  const isSubmitting = loginMutation.isPending;
 
-  const onSubmit = (values: z.infer<typeof FormSchema>) => {
-    console.log("LOGIN FORM VALUES", values);
+  const onSubmit = async (values: z.infer<typeof FormSchema>) => {
+    setError(null);
+    
+    try {
+      const result = await loginMutation.mutateAsync({
+        email: values.email,
+        password: values.password,
+      });
+      
+      if (result.code === 200 && result.result) {
+        // Update auth context
+        login(result.result.accessToken, {
+          sub: result.result.sub,
+          email: result.result.email,
+          role: result.result.role,
+        });
+        
+        // Successful login - redirect based on user role
+        const userRole = result.result.role;
+        if (userRole === 'admin') {
+          router.push('/admin/analytics');
+        } else {
+          router.push('/');
+        }
+      } else {
+        setError(result.message || 'Login failed');
+      }
+    } catch (err) {
+      setError(getErrorMessage(err));
+    }
   };
 
   return (
@@ -131,11 +170,19 @@ export const LoginForm = () => {
             Forget password?
           </Link>
         </div>
+        
+        {error && (
+          <Alert variant="error" className="mb-4">
+          <CircleXIcon className="size-4" />
+          <AlertTitle>Error</AlertTitle>
+          <AlertDescription>{error}</AlertDescription>
+        </Alert>
+        )}
+        
         <Button
           type="submit"
           size="sm"
           className="w-full"
-          onChangeCapture={form.handleSubmit(onSubmit)}
           disabled={!isValid || isSubmitting}
         >
           {isSubmitting ? (

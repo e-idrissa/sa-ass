@@ -3,6 +3,7 @@ import { JwtService } from '@nestjs/jwt';
 import { CredentialsDto } from 'src/common/dto/credentials.dto';
 import { UserResponseDto } from 'src/common/dto/users.dto';
 import { UsersService } from 'src/users/users.service';
+import { comparePassword } from './common/utils/bcrypt';
 
 @Injectable()
 export class LoginService {
@@ -12,9 +13,6 @@ export class LoginService {
   ) {}
 
   async validateUser(credentials: CredentialsDto): Promise<UserResponseDto> {
-    console.log('validateUser called with:', credentials);
-    console.log('credentials type:', typeof credentials);
-    console.log('credentials.email:', credentials?.email);
     const res = await this.usersService.findOneByEmail(credentials.email);
     return res;
   }
@@ -29,7 +27,11 @@ export class LoginService {
       };
     }
 
-    if (res.code === 401) {
+    const isPasswordValid = await comparePassword(
+      credentials.passwordHash,
+      res.result?.passwordHash,
+    );
+    if (!isPasswordValid) {
       return {
         code: 401,
         message: 'Invalid password',
